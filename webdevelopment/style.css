@@ -15,7 +15,7 @@ html {
   font-family: 'EB Garamond', Garamond, serif;
 }
 
-.info {
+.hero .info {
   width: 90%;
   height: 100%;
   max-width: 1000px;
@@ -48,7 +48,7 @@ html {
   margin-bottom: 30px;
 }
 
-.join-button {
+.hero .join-button {
   background-color: #2383c6; /* Default background color */
   color: white; /* Default text color */
   font-family: Arial, Helvetica, sans-serif;
