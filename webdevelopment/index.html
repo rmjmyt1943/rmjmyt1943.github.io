@@ -3,15 +3,15 @@
 
 <!--
 Name: Rodney Jones
-Date: 9/19/2025
-Page: Home page
-Description:
+Date: 10/3/2025
+Page: Home 
+Description: Creating the Hero Section of a Website
 -->
 
     <head> <!--Contains metadata and browser instructions-->
         <meta charset="utf-8"> <!--Character encoding-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Mobile-friendly layout-->
-        <title> Philo Sé Club Official Website</title> <!--Gives your page a title--> 
+        <title> Philo Sé Club Official Website </title> <!--Gives your page a title--> 
         <link rel="stylesheet" href="style.css"> <!--A link to an external CSS file-->
     </head>
 
@@ -21,9 +21,19 @@ Description:
 
         </header>
         
-        <h1> Welcome to Philo Sé Bible Study Club! </h1> 
-            <blockquote>  The Philo Se Bible Study Club focuses on the teaching, 
-                “Love one another. As I [Christ] have loved you…” <em>(John 13:34)</em>. We hope to revive campus by planting the love of Christ in everyone's hearts. </blockquote>
+        <section id="hero"> <!--A hero section with a heading and a blockquote-->
+            <div class="hero"> <!--Container for hero content, since my section and div is called hero, would it affect the code?--> 
+                <div class="info">
+                    <h1> Philo Sé Bible Study Club </h1> 
+                    <blockquote>  <p>The Philo Se Bible Study Club focuses on the teaching, <br>
+                    “Love one another. As I [Christ] have loved you…” <em><br>(John 13:34)</em>. 
+                    We hope to revive campus by planting the <br>love of Christ in everyone's hearts. </p></blockquote>
+                    <button class="join-button">Join Us</button>
+                    <button class="we-button">What Are We</button> 
+                </div>
+            </div>
+        </section>
+            
             <h3> Events/News </h3>
             <!--3 columns of different events and news (Past,Upcoming)-->
             <h3> About </h3>
@@ -43,7 +53,7 @@ Description:
             <button type="submit"> Submit </button>
 
      <footer> <!--section that contains your name and current date-->
-            <h1> Rodney Jones 9/19/2025</h1>
+            <h1> Rodney Jones 10/4/2025</h1>
         </footer>
     
     </body>
