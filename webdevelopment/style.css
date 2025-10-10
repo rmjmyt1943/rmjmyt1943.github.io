@@ -115,11 +115,16 @@ li {
   background-color: #2383c6;
   padding: 2px 10px; /* Padding around list items */
   border: #000000 solid; /* Border color */
+  border-radius: 10px; /* Rounded corners */
 }
 
-ul:hover {
-  color: #000000; /* Text color on hover */
+li:hover {
+  background-color: #ffffff; /* Background color on hover */
+  color: #2383c6; /* Text color on hover */
+  border: none; /* Border color on hover */
+  box-shadow: 0 15px 8px rgba(0, 0, 0, 0.1);
 }
+
 /* Vision Section */
 .vision p{
   margin-left: 500px;
