@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
 
+/* General Styles
+(colors, fonts, etc.) Primary color - #fff
+Primary color - #2383c6
+Secondary color - #32373c
+Accent color - #cf2e2e*/
+ */
 h1 {
   color: #000000; /* Transparent color */
   font-family: 'Garamond';
@@ -90,3 +96,36 @@ html {
   }
 } 
 /* End of Hero */
+
+/* Vision Section */
+.vision p{
+  margin-left: 500px;
+}
+.vision img {
+  margin-right: 500px;
+  border: solid #2383c6; /* Border color */
+  padding: 20px; /* Padding around the image */
+  position: relative;
+  left: 150px;
+  top: 120px
+}
+/* About Page PDF */
+.vision .vision-info a {
+  color: #592ecf; /* Link color */
+  font-size: 20px; /* Font size */
+  background-color: #bac0c7; /* Background color */
+  border:  solid #2383c6; /* Border color */
+  border-width: 3px; /* Border width */
+  padding: 5px 40px; /* Padding around the link */
+  border-radius: 20px; /* Rounded corners */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold;
+  position: relative;
+  left: 1200px;
+  bottom: 20px;
+  box-shadow: 0 15px 8px rgba(0, 0, 0, 0.1);
+}
+.vision .vision-info a:hover {
+  background-color: #2383c6; /* Background color on hover */
+  color: white; /* Text color on hover */
+}
