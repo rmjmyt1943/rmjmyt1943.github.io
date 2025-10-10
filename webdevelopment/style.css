@@ -110,7 +110,7 @@ html {
   top: 120px
 }
 /* About Page PDF */
-.vision .vision-info a {
+.vision a{
   color: #592ecf; /* Link color */
   font-size: 20px; /* Font size */
   background-color: #bac0c7; /* Background color */
@@ -125,7 +125,7 @@ html {
   bottom: 20px;
   box-shadow: 0 15px 8px rgba(0, 0, 0, 0.1);
 }
-.vision .vision-info a:hover {
+.vision a:hover {
   background-color: #2383c6; /* Background color on hover */
   color: white; /* Text color on hover */
 }
