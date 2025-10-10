@@ -94,9 +94,32 @@ html {
   p {
     font-size: 14px;
   }
+  .vision p{
+    font-size: 14px;
+  }
 } 
 /* End of Hero */
 
+ul {
+  list-style-type: square; /* Change to circle, disc, etc. for different bullet styles */
+  justify-content: space-between;
+  font-size: 30px; /* Font size */
+  color: #ffffff; /* Text color */
+  display: flex;
+}
+
+li {
+  margin-bottom: 10px; /* Space between list items */
+  font-weight: bold;
+  position: relative;
+  background-color: #2383c6;
+  padding: 2px 10px; /* Padding around list items */
+  border: #000000 solid; /* Border color */
+}
+
+ul:hover {
+  color: #000000; /* Text color on hover */
+}
 /* Vision Section */
 .vision p{
   margin-left: 500px;
@@ -121,7 +144,7 @@ html {
   text-decoration: none; /* Remove underline */
   font-weight: bold;
   position: relative;
-  left: 1200px;
+  left: 60rem;
   bottom: 20px;
   box-shadow: 0 15px 8px rgba(0, 0, 0, 0.1);
 }
