@@ -5,7 +5,14 @@
 Primary color - #2383c6
 Secondary color - #32373c
 Accent color - #cf2e2e*/
- */
+
+/* Header Styles */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
 h1 {
   color: #000000; /* Transparent color */
   font-family: Arial, Helvetica, sans-serif;
@@ -27,32 +34,24 @@ html {
   height: 100%;
   max-width: 1000px;
   margin: 0;
-}
+} 
 
-.hero {
+ .hero {
   width: 100%;
   height: 100vh;
   background: url(Logo_PhiloSe.jpg) no-repeat center center/cover;
   background-size: contain;
-  background-position: right;
-  /*Text*/ /* For some reason when I remove the word "Text" the text position is off but when I add, it breaks the 
-  the code becuase it's not an element */
-  padding: 80px;
-}
+  background-position: 900px -180px;
+} 
 
-.info h1 {
-  color: black;
-  font-weight: bold;
-  font-size: 22px;
-  padding-left: 100px;
-}
 
 .info p{
   color: black;
   font-weight: bold;
-  padding-left: 150px;
-  margin-top: 150px;
+  padding-left: 200px;
+  padding-top: 125px;
   margin-bottom: 30px;
+  font-size: 30px;
 }
 
 .hero .info button {
@@ -63,7 +62,8 @@ html {
   font-size: 20px;
   padding: 10px 30px;
   border: none;
-  margin-left: 190px;
+  position: relative;
+  margin-left: 240px;
   cursor: pointer;
   transition: background-color 0.3s ease; /* Smooth transition for background color */
 }
@@ -98,10 +98,32 @@ html {
   .vision p{
     font-size: 14px;
   }
+
+  .hero .info {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  .hero .info p {
+    font-size: 18px;
+    padding: 0;
+    margin: 20px 0;
+  }
+  .hero .info button {
+    width: 40%;
+    margin: 10px 0 10px 30px;
+  }
+  .hero .info .we-button {
+    padding: 10px 20px;
+  }
+  .hero {
+    background-position: center center;
+  }
 } 
 /* End of Hero */
 
-ul {
+.about-list ul {
   list-style-type: square; /* Change to circle, disc, etc. for different bullet styles */
   justify-content: space-between;
   font-size: 30px; /* Font size */
@@ -109,7 +131,7 @@ ul {
   display: flex;
 }
 
-li {
+.about-list li {
   font-weight: bold;
   position: relative;
   right: 10px;
@@ -120,7 +142,7 @@ li {
   border-radius: 10px; /* Rounded corners */
 }
 
-li:hover {
+.about-list li:hover {
   background-color: #ffffff; /* Background color on hover */
   color: #2383c6; /* Text color on hover */
   border: none; /* Border color on hover */
@@ -191,3 +213,4 @@ li:hover {
   color: #ffffff;
   text-align: center;
 }
+
