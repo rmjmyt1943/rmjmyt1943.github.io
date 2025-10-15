@@ -13,30 +13,53 @@ Description: Creating the Hero Section of a Website
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Mobile-friendly layout-->
         <title> Philo Sé Club Official Website </title> <!--Gives your page a title--> 
         <link rel="stylesheet" href="style.css"> <!--A link to an external CSS file-->
+        <link rel="stylesheet" href="nav.css">
     </head>
 
     <body> <!--A sample heading for visual testing-->
             
      <header> <!--section that will later contain your logo and navigation-->
-
+        <div class="header-top">
+            <!-- <a href="https://watv.org" class="site-logo"> -->
+                <img src="Logo_PhiloSe.svg" alt="Logo">
+            <h1> Philo Sé Bible Study Club </h1> 
+          </div>
+        <nav class="nav">
+            <nav class="main-nav">
+             <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="events.html">Contents</a></li>
+                <li><a href="events.html">Reflection</a></li>
+                <li><a href="contact.html">Contact</a></li>
+             </ul>
+            </nav>
+            <!-- <nav class="secondary-nav">
+                <ul>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">🌐 English</a></li>
+                </ul>
+            </nav> -->
+        </nav>    
+        </div>
         </header>
         
         <section id="hero"> <!--A hero section with a heading and a blockquote-->
             <div class="hero"> <!--Container for hero content, since my section and div is called hero, would it affect the code?--> 
                 <div class="info">
-                    <h1> Philo Sé Bible Study Club </h1> 
+                    <!-- <h1> Philo Sé Bible Study Club </h1>  -->
                     <blockquote>  <p>The Philo Se Bible Study Club focuses on the teaching, <br>
                     “Love one another. As I [Christ] have loved you…” <em><br>(John 13:34)</em>. 
                     We hope to revive campus by planting the <br>love of Christ in everyone's hearts. </p></blockquote>
                     <button class="join-button">Join Us</button>
-                    <button class="we-button">Learn More</button> 
+                    <button class="we-button">What Are We</button> 
                 </div>
             </div>
         </section>
             
-            <h3> Events/News </h3>
+            <h2> Events/News </h2>
             <!--3 columns of different events and news (Past,Upcoming)-->
-            <h3> About </h3>
+            <h2> About </h2>
 
             <p> We carry out various activities on campus and in our community to promote unity and fellowship being a source of hope through the teachings of Christ.
                 <br>We help students grow in their faith and relationship with God through weekly Bible studies and fellowship events.
@@ -47,7 +70,7 @@ Description: Creating the Hero Section of a Website
  
             </p>
                 
-            <h3> Get Started </h3> <!--Simple sign up sheet will name and email-->
+            <h2> Get Started </h2> <!--Simple sign up sheet will name and email-->
             <p> Name: ________________ </p>
             <p> Email: ________________ </p>
             <button type="submit"> Submit </button>
@@ -60,7 +83,6 @@ Description: Creating the Hero Section of a Website
 
 
 </html>
-
 
 
 
