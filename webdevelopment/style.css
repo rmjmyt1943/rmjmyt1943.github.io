@@ -41,7 +41,7 @@ html {
   height: 100vh;
   background: url(Logo_PhiloSe.jpg) no-repeat center center/cover;
   background-size: contain;
-  background-position: 900px -180px;
+  background-position: 900px -110px;
 } 
 
 
@@ -214,3 +214,37 @@ html {
   text-align: center;
 }
 
+/* Reflection */
+.reflection {
+  margin: 50px;
+  font-size: 20px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.reflection h1 {
+  font-size: 36px;
+  text-decoration: underline;
+  display: inline-block;
+  margin-left: 40px;
+  padding: 10px;
+  border: 5px solid transparent; 
+  border-image: linear-gradient(to right, #8c52ff, #5ce1e6); 
+  border-image-slice: 2; 
+}
+
+.reflection p {
+  text-indent: 2em;
+  text-align: justify;
+  border: 1px solid #ccc; 
+  padding: 20px; 
+  padding-top: 5px;
+  margin: 15px 10px 20px 0px; 
+  background-color: #f9f9f9; 
+  border-radius: 10px; 
+}
+
+.reflection p::first-letter {
+  font-size: 200%;
+  font-weight: bold;
+}
