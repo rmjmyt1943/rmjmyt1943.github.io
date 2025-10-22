@@ -20,27 +20,33 @@ Description: Creating the Hero Section of a Website
             
      <header> <!--section that will later contain your logo and navigation-->
         <div class="header-top">
+            <div class="site-logo">
                 <img src="Logo_PhiloSe_Transparent - Copy.png" alt="Logo">
+            </div>
             <h1> Philo Sé Bible Study Club </h1> 
-          </div>
-        <nav class="nav">
-            <nav class="main-nav">
-             <ul>
+        </div>
+
+        <nav>
+             <ul class="main-nav">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="events.html">Contents</a></li>
                 <li><a href="reflection.html">Reflection</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html">Contact ></a>
+                    <ul class="dropdown">
+                        <li><a href="#">Sign Up</a></li>
+                        <li><a href="#">Bible Study</a></li>
+                        <li><a href="#">Frequently Asked Questions</a></li>
+                    </ul>
+                </li>
+            <div class="secondary-nav-2">
+                    <li><a href="login">Notifications</a></li>
+                    <!--<img src="World icon.jpg" alt="Globe Icon"> --> 
+                    <li><a href="lang">English</a></li>
+                    <!-- <span class="search">Search</span> -->
+            </div>
              </ul>
-            </nav>
-            <!-- <nav class="secondary-nav">
-                <ul>
-                    <li><a href="#">Login</a></li>
-                    <li><a href="#">🌐 English</a></li>
-                </ul>
-            </nav> -->
-        </nav>    
-        </div>
+        </nav>   
         </header>
         
         <section id="hero"> <!--A hero section with a heading and a blockquote-->
