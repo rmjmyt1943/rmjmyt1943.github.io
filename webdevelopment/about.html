@@ -3,9 +3,9 @@
 
 <!--
 Name: Rodney Jones
-Date: 10/9/2025
+Date: 10/23/2025
 Page: About page
-Description: Add and Sytle PDF Link
+Description: Add image and video
 -->
 
 <head> <!--Contains metadata and browser instructions-->
@@ -18,15 +18,20 @@ Description: Add and Sytle PDF Link
 
     <body> <!--A sample heading for visual testing-->
             
-     <header> <!--section that will later contain your logo and navigation-->
-        <div class="header-top-2">
-            <a href="index.html"><img src="Logo_PhiloSe_Transparent - Copy.png" alt="Logo"></a>
-            <nav class="main-nav-2">
-             <ul class="flex-ul">
+    <header> <!--section that will later contain your logo and navigation-->
+        <div class="header-top">
+            <div class="site-logo">
+                <img src="Logo_PhiloSe_Transparent-Copy.png" alt="Circular emblem showing six hands in different skin tones forming a ring and cupping a bright blue heart at the center; white badge with thin black and blue border; outer text reads GIVING HOPE TO THE WORLD and PHILO SÉ CLUB; tone conveys warmth, unity, and hope">
+            </div>
+            <h1> Philo Sé Bible Study Club </h1> 
+        </div>
+
+        <nav>
+             <ul class="main-nav">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="events.html">Contents</a>
-                <ul class="dropdown-3">
+                <ul class="dropdown-2">
                         <li><a href="#">Word of God</a></li>
                         <li><a href="#">Family</a></li>
                         <li><a href="#">Fellowship</a></li>
@@ -34,30 +39,33 @@ Description: Add and Sytle PDF Link
                 </li>
                 <li><a href="reflection.html">Reflection</a></li>
                 <li><a href="contact.html">Contact</a>
-                    <ul class="dropdown--2">
+                    <ul class="dropdown">
                         <li><a href="#">Sign Up</a></li>
                         <li><a href="#">Schedule Study</a></li>
                         <li><a href="#">Frequently Asked Questions</a></li>
                     </ul>
                 </li>
-            </ul>
-            </nav>
-           
-            <div class="secondary-nav">
-                    <li><a href="login">Notifications</a></li>
-                    <!-- <img src="World icon.jpg" alt="Globe Icon"> -->
-                    <li><a href="lang">English</a></li>
+            <!-- <div class="secondary-nav-2"> -->
+                    <!-- <li><a href="login" class="split">Notifications</a></li> -->
+                    <!--<img src="World icon.jpg" alt="Globe Icon"> --> 
+                    <li><a href="lang" class="split">English</a></li>
                     <!-- <span class="search">Search</span> -->
-            </div>    
-        </div>
+            <!-- </div> -->
+        </ul>
+        </nav>   
         </header>
-        
+        <div class="origin">
         <h1> Origin and Meaning of Philo Sé </h1> <!--Maybe add photo of Greek word and Bible-->
-            <p>  The Greek word ‘φιλ σε’ <strong>(Philo se)</strong> means ‘I love you.’ That was the Apostle Peter’s answer when Jesus asked him three times, “Do you love Me?” 
-                As we are inspired to spread and create a positive environment on campus, our focus is on delivering love.
-            <p>Philo Sé Bible Study Club will show convincing proof that  
-                <em>Science, World History</em>, and other subjects that seem to contradict the Bible, <strong>support it</strong>.</p>
-            </p>
+        <video controls autoplay muted loop>
+            <source src="Media/PhiloSeVideo.mp4">
+            This browser does not support HTML5 audio!
+        </video>
+            <p>  The Greek word ‘φιλ σε’ <strong>(Philo se)</strong> means ‘I love you.’ That was the Apostle Peter’s answer when Jesus asked him three times, “Do you love Me?” <br><br>
+                As we are inspired to spread and create a positive environment on campus, our focus is on delivering love. <br><br>
+            Philo Sé Bible Study Club will show <strong>convincing proof</strong> that  
+                <em>Science, World History</em>, and other subjects that seem to contradict the Bible, support it.</p>
+                
+            </div>
             <div class="about-list">    
             <ul>
                 <li>Love</li>
@@ -66,36 +74,37 @@ Description: Add and Sytle PDF Link
                 <li>Unity</li>
                 <li>Family</li>
             </ul>
-        
-            <h2> Vision </h2>
-            
-            <section id="vision"> <!--Container for vision content--> 
-                <div class="vision">
-                    <img src="" alt="Group Photo"> <!--Placeholder for group photo-->
+            </div>
+            <div id="vision"> <!--Container for vision content--> 
+                <div class="vision-about">
+                    <img src="Media/PhiloSeSeminar.JPG" alt="Philo Se in Seminar Room"> <!--Placeholder for group photo-->
                         <p>The power of one person is weak, but if we all work together to solve the problems our campus is facing, the hopeful future of Mizzou will become a reality.  
                     We believe university students are the leaders of future generations who act for the real change of the Earth. 
-                    When we come together centered on the love of a Mother, we can make a <strong>difference</strong>. <br>We will devote
+                    When we come together centered on the love of a Mother, we can make a <strong>difference</strong>. We will devote
                     our efforts in helping change the <em>present despair</em> to <em>future hope</em>, and <em>current frustration</em> to <em>future happiness</em> 
                     on campus by getting more involved.
-                    </p>
-                        <a href="About Us.png">Flyer Link</a>
+                    <a href="AboutUs.png">Flyer Link</a>
                 </div>
             </section>
-           <div class="vision-list">  
+           <!-- <div class="vision-list">  
                 <ul>
                     <li>Networking Opportunities</li>
                     <li>Spiritual development trainings</li>
                     <li>Bible camps and trips across the USA</li>
                     <li>Weekly Bible Studies & Campus Activities</li>
                 </ul>
-            </div>
+            </div> -->
 
             <p>
                 <div class="motto">
-                    <h2>"As God always gives love, giving love is more blessed than receiving love" <em>(Act 20:35)</em> </h2></p>
+                    <h2>"As God always gives love, giving love is more blessed than receiving love" <em>(Act 20:35)</em> </h2>
                 </div>
      <footer> <!--section that contains your name and current date-->
-            <h1> Rodney Jones 10/9/2025</h1>
+        <div class="line"></div>
+        <div class="footer-logo">
+        <img src="Logo_PhiloSe_Transparent-Copy.png" alt="Logo">
+        </div>
+        <h1> Rodney Jones 10/23/2025</h1>
         </footer>
     
     </body>
