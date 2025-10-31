@@ -73,18 +73,6 @@ html {
   background-color: #1c3168; /* Background color on hover */
 }
 
-/* .hero .info a {
-  background-color: #8e9195; 
-  color: white; 
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 20px;
-  padding: 10px 30px;
-  border: none;
-  margin-left: 30px;
-  cursor: pointer;
-  transition: background-color 0.3s ease; 
-} */
 
 .hero .info a:hover {
   color: #ffffff; /* Text color on hover */
@@ -139,6 +127,12 @@ html {
     background-position: center center;
   }
 } 
+
+/* Print About Page */
+/* @media print {
+  .
+} */
+
 /* End of Hero */
 
 .about-list ul {
@@ -312,4 +306,28 @@ video {
 footer h1 {
   display: flex;
   justify-content: center;
+  color: white;
 }
+
+footer {
+  background-color: #2383c6;
+  color: white;
+  text-align: center;
+  padding: 1px 0;
+  margin-top: 200px;
+}
+footer img {
+  vertical-align: middle;
+  margin-right: 5px;
+  color: white;
+}
+footer a {
+  color: white;
+  font-size: 16pt;
+  text-decoration: none;
+  font-weight: bold;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+/* End of About Section */

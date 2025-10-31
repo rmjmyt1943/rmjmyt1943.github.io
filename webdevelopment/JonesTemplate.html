@@ -13,39 +13,54 @@ Description: Adding nav and header to template
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Mobile-friendly layout-->
         <title> JonesTemplate </title> <!--Gives your page a title--> 
         <link rel="stylesheet" href="style.css"> <!--A link to an external CSS file-->
-        <link rel="stylesheet" href="nav.css">
+        <link rel="stylesheet" href="nav.css"> <!--A link to nav CSS file-->
+        <link rel="icon" type="image/x-icon" href="Media/favicon.ico"> <!--Favicon for the webpage-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
 
     <body> <!--A sample heading for visual testing-->
             
      <header> <!--section that will later contain your logo and navigation-->
         <div class="header-top">
-                <img src="Logo_PhiloSe.svg" alt="Logo">
+            <div class="site-logo">
+                <img src="Logo_PhiloSe_Transparent-Copy.png" alt="Circular emblem showing six hands in different skin tones forming a ring and cupping a bright blue heart at the center; white badge with thin black and blue border; outer text reads GIVING HOPE TO THE WORLD and PHILO SÉ CLUB; tone conveys warmth, unity, and hope">
+            </div>
             <h1> Philo Sé Bible Study Club </h1> 
-          </div>
-        <nav class="nav">
-            <nav class="main-nav">
-             <ul>
+        </div>
+
+        <nav>
+             <ul class="main-nav">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="events.html">Contents</a></li>
-                <li><a href="events.html">Reflection</a></li>
-                <li><a href="contact.html">Contact</a></li>
-             </ul>
-            </nav>
-            <!-- <nav class="secondary-nav">
-                <ul>
-                    <li><a href="#">Login</a></li>
-                    <li><a href="#">🌐 English</a></li>
-                </ul>
-            </nav> -->
-        </nav>    
-        </div>
+                <li><a href="events.html">Contents</a>
+                <ul class="dropdown-2">
+                        <li><a href="#">Word of God</a></li>
+                        <li><a href="#">Family</a></li>
+                        <li><a href="#">Fellowship</a></li>
+                    </ul>
+                </li>
+                <li><a href="reflection.html">Reflection</a></li>
+                <li><a href="contact.html">Contact</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Sign Up</a></li>
+                        <li><a href="#">Schedule Study</a></li>
+                        <li><a href="#">Frequently Asked Questions</a></li>
+                    </ul>
+                </li>
+            <!-- <div class="secondary-nav-2"> -->
+                    <!-- <li><a href="login" class="split">Notifications</a></li> -->
+                    <!--<img src="World icon.jpg" alt="Globe Icon"> --> 
+                    <li><a href="lang" class="split">English</a></li>
+                    <!-- <span class="search">Search</span> -->
+            <!-- </div> -->
+        </ul>
+        </nav>   
         </header>
         
         <h1> Welcome to Philo Sé Bible Study Club! </h1> 
-            <blockquote>  The Philo Se Bible Study Club focuses on the teaching, 
-                “Love one another. As I [Christ] have loved you…” <em>(John 13:34)</em>. We hope to revive campus by planting the love of Christ in everyone's hearts. </blockquote>
+            <blockquote>  <p>The Philo Se Bible Study Club focuses on the teaching, <br>
+                    “Love one another. As I [Christ] have loved you…” <em><br>(John 13:34)</em>. 
+                    We hope to revive campus by planting the <br>love of Christ in everyone's hearts. </p></blockquote>
             <h3> Events/News </h3>
             <!--3 columns of different events and news (Past,Upcoming)-->
             <h3> About </h3>
@@ -65,7 +80,11 @@ Description: Adding nav and header to template
             <button type="submit"> Submit </button>
 
      <footer> <!--section that contains your name and current date-->
-            <h1> Rodney Jones 10/14/2025</h1>
+            <img src="Media/icons8-phone-32.png" alt="Phone Icon">
+            <a href="#">123-345-6789<br></a>
+            <img src="Media/white1-email-32.png" alt="Email Icon">
+            <a href="#">philoseclub@gmail.com</a>
+            <h1> Rodney Jones 10/29/2025</h1>
         </footer>
     
     </body>
