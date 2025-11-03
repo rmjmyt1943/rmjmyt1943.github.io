@@ -1,0 +1,199 @@
+<!DOCTYPE html> <!--Declares the page as an HTML5 document-->
+<html lang="en-US"> <!--Root tag with a language attribute for accessibility-->
+
+<!--
+Name: Rodney Jones
+Date: 11/2/2025
+Page: Contact Page
+Description: Contact page for Philo Sé Bible Study Club website
+-->
+
+    <head> <!--Contains metadata and browser instructions-->
+        <meta charset="utf-8"> <!--Character encoding-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Mobile-friendly layout-->
+        <title> About - Philo Sé Club </title> <!--Gives your page a title--> 
+        <link rel="stylesheet" href="style.css"> <!--A link to an external CSS file-->
+        <link rel="stylesheet" href="nav.css"> <!--A link to nav CSS file-->
+        <link rel="icon" type="image/x-icon" href="Media/favicon.ico"> <!--Favicon for the webpage-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+
+    <body> <!--A sample heading for visual testing-->
+            
+     <header> <!--section that will later contain your logo and navigation-->
+        <div class="header-top">
+            <div class="site-logo">
+                <img src="Logo_PhiloSe_Transparent-Copy.png" alt="Circular emblem showing six hands in different skin tones forming a ring and cupping a bright blue heart at the center; white badge with thin black and blue border; outer text reads GIVING HOPE TO THE WORLD and PHILO SÉ CLUB; tone conveys warmth, unity, and hope">
+            </div>
+            <h1> Philo Sé Bible Study Club </h1> 
+        </div>
+
+        <nav>
+             <ul class="main-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#">Contents</a>
+                <ul class="dropdown-2">
+                        <li><a href="#">Word of God</a></li>
+                        <li><a href="#">Family</a></li>
+                        <li><a href="#">Fellowship</a></li>
+                    </ul>
+                </li>
+                <li><a href="reflection.html">Reflection</a></li>
+                <li><a href="contact.html">Contact</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Sign Up</a></li>
+                        <li><a href="#">Schedule Study</a></li>
+                        <li><a href="#">Frequently Asked Questions</a></li>
+                    </ul>
+                </li>
+            <!-- <div class="secondary-nav-2"> -->
+                    <!-- <li><a href="login" class="split">Notifications</a></li> -->
+                    <!--<img src="World icon.jpg" alt="Globe Icon"> --> 
+                    <li><a href="lang" class="split">English</a></li>
+                    <!-- <span class="search">Search</span> -->
+            <!-- </div> -->
+        </ul>
+        </nav>   
+        </header>
+
+        <div class="contact-hero">
+            <h1> Thank you for visiting Philo Sé Bible Study Club! </h1> 
+            <img src="Media/PhiloSePic.jpeg" alt="Philo Sé Club Members">
+            <h2>Are you ready to join the fun adventure to save the world? </h2>
+            <p>Sign up today to get started!</p>
+        </div>
+        
+        <!-- <div class="contact-intro">
+            <div class="column">
+                <h3>Column 1 Title</h3>
+                <p>This is the text content for column 1. It can be a paragraph, a list, or any other content you need.</p>
+                <button class="button">Action 1</button>
+            </div>
+
+            <div class="column">
+                <h3>Column 2 Title</h3>
+                <p>This is the text content for column 2. It provides information relevant to this section.</p>
+                <button class="button">Action 2</button>
+            </div>
+  
+            <div class="column">
+                <h3>Column 3 Title</h3>
+                <p>This is the text content for column 3. It offers details and descriptions for this column.</p>
+                <button class="button">Action 3</button>
+            </div>
+        </div> -->
+
+        <!-- <div class="contact-form">
+            <h1>Get in Touch</h1>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div> -->
+    
+        <form class="signup-form"> 
+            <div id="title-container" class="title" data-field-id="1">
+                <label class="title-label" for="title">Title <span class="title-required-label">*</span>
+                </label>
+                <select id="title-field" class="title-field-required" name="title-field" required="required">
+                    <option value="non-title">None</option>
+                    <option value="doctor">Dr.</option>
+                    <option value="professor">Prof.</option>
+                    <option value="mr">Mr.</option>
+                    <option value="ms">Ms.</option>
+                    <option value="mrs">Mrs.</option>
+                </select>
+            </div>
+
+            <div id="firstname-container" class="firstname" data-field-id="2">
+                <label class="firstname" for="firstname">First name <span class="firstname-required-label">*</span>
+                </label>
+                <input type="text" id="firstname" class="firstname-field-required" name="firstname" placeholder="Enter First Name" required="required">
+            </div>
+
+            <div id="lastname-container" class="lastname" data-field-id="3">
+                <label class="lastname" for="lastname">Last Name <span class="lastname-required-label">*</span>
+                </label>
+                <input type="text" id="lastname" class="lastname-field-required" name="lastname" placeholder="Enter Last Name" required="required">
+            </div>
+
+            <!-- <div id="student-container" class="student" data-field-id="4">
+                <label class="student" for="student">Are you a Mizzou student? <span class="student-required-label">*</span>
+                </label>
+                <select id="student" class="student-field-required" name="student" required="required">
+                    <option value="student">Yes</option>
+                    <option value="non-student">No</option>
+                </select>
+            </div> -->
+
+            <div id="email-container" class="email" data-field-id="5">
+                <label class="email" for="email">Email <span class="email-required-label">*</span>
+                </label>
+                <input type="email" id="email" class="email-field-required" name="email" placeholder="Enter Email" required="required">
+            </div>
+            
+            <!-- <div id="wpforms-4902-field_4-container" class="wpforms-field wpforms-field-url wpforms-one-half wpforms-first" data-field-id="4">
+                <label class="wpforms-field-label" for="wpforms-4902-field_8">What do you need help with <span class="wpforms-required-label">*</span>
+                </label>
+                <select id="wpforms-4902-field_8" class="wpforms-field-medium wpforms-field-required" name="wpforms[fields][8]" required="required">
+                    <option value="Growth strategy support">Growth strategy support</option>
+                    <option value="Growing your team">Growing your team</option>
+                    <option value="1:1 mentoring">1:1 mentoring</option>
+                    <option value="Seeking an angel investment">Seeking an angel investment</option>
+                </select>
+            </div> -->
+            
+            <div id="message-container" class="message" data-field-id="6">
+                <label class="message" for="message">Message <span class="message-required-label">*</span></label>
+                <textarea id="message" class="message-field" name="message" placeholder="Message Us" required="required"></textarea>
+            </div>
+
+        <!-- <div class="wpforms-submit-container">
+            <input type="hidden" name="wpforms[id]" value="4902">
+            <input type="hidden" name="wpforms[author]" value="5">
+            <input type="hidden" name="wpforms[post_id]" value="4820">
+            <button type="submit" name="wpforms[submit]" id="wpforms-submit-4902" class="wpforms-submit" data-alt-text="Sending..." data-submit-text="Submit" aria-live="assertive" value="wpforms-submit">Submit</button>
+            <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2026%2026'%3E%3C/svg%3E" class="wpforms-submit-spinner" style="display: none;" width="26" height="26" alt="" data-lazy-src="https://mhb.xyz/wp-content/plugins/wpforms/assets/images/submit-spin.svg">
+            <noscript>
+                <img src="https://mhb.xyz/wp-content/plugins/wpforms/assets/images/submit-spin.svg" class="wpforms-submit-spinner" style="display: none;" width="26" height="26" alt="">
+            </noscript>
+        </div> -->
+
+        <input type="submit" class="submit-button">
+
+        </form>
+        
+        <!-- <div class="newsletter">
+            <h1>Not Ready to Join?</h1>
+            <h2>Sign up for our newsletters and future post!</h2>
+            <form action="#" method="post">
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div> -->
+
+
+     <footer> <!--section that contains your name and current date-->
+            <img src="Media/icons8-phone-32.png" alt="Phone Icon">
+            <a href="#">123-345-6789<br></a>
+            <img src="Media/white1-email-32.png" alt="Email Icon">
+            <a href="#">philoseclub@gmail.com</a>
+            <h1> Rodney Jones 10/31/2025</h1>
+        </footer>
+    
+    </body>
+
+
+</html>
+
+
+
