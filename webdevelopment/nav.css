@@ -4,26 +4,25 @@
   list-style: none;
 }
 
-.header-top-2 {
+/* .header-top-2 {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
   align-items: center;
   list-style: none;
   background-color: #32373c;
-}
+} */
 
 
 .header-top h1 {
   color: black;
-  font-weight: bold;
-  font-size: 16px;
+  font-size: 20px;
   margin: 15px 10px 15px 0px;
   display: inline;
 }
 
 .header-top img{
-  width: 40px;
-  padding-left: 40px;
+  width: 60px;
+  padding-left: 80px;
   margin: 7px 10px 5px 0;
 }
 
@@ -48,8 +47,9 @@
 nav .main-nav{
   background-color: #2383c6;
   display: flex;
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
   align-items: center;
+  padding: 5px;
 }
 
 .main-nav-2{
@@ -63,14 +63,49 @@ nav .main-nav{
 
 .main-nav {
   list-style: none;
-  font-weight: 600;
 }
 
 .main-nav li {
   position: relative;
-  font-size: 22px; 
+  /* font-size: 2px;  */
   font-family: Arial, Helvetica, sans-serif;
- 
+  gap: 10px;
+  padding-left: 50px;
+}
+.main-nav .home {
+  margin-left: 10px;
+}
+
+.dropdown .dropdown-li {
+  padding: 0;
+}
+
+.main-nav a.active-about {
+  border: 2px solid #ffffff;
+  border-radius: 15px;
+  padding: 10px 15px;
+}
+
+.main-nav a.active-home {
+  border: 2px solid #ffffff;
+  border-radius: 15px;
+  padding: 10px 15px;
+}
+
+.main-nav a.active-contact {
+  border: 2px solid #ffffff;
+  border-radius: 15px;
+  padding: 10px 15px;
+}
+
+.main-nav a.active-reflection {
+  border: 2px solid #ffffff;
+  border-radius: 15px;
+  padding: 10px 15px;
+}
+
+.dropdown-2 .dropdown-2-li {
+  padding: 0;
 }
 
 .main-nav-2 li {
@@ -251,10 +286,51 @@ nav a.split {
   display: flex;
 }
 
-@media only screen and (max-width: 500px) {
-  .main-nav ul {
+.symbol {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  
+  nav .main-nav {
     flex-direction: column;
-    width: 100%;
+    align-items: center;
+  }
+
+  .header-top {
+    margin: 0;
+    padding: 0;
+  } 
+
+  .header-top img{
+    justify-content: center;
+    margin-left: 45px;
+  }
+
+  .main-nav a {
+    justify-content: center;
+  }
+
+  .dropdown {
+    position: static;
+    border: 3px solid black;
+    border-radius: 30px;
+  }
+
+  .dropdown-2 {
+    position: static;
+    border: 3px solid black;
+    border-radius: 30px;
+  }
+
+  .main-nav li:hover .symbol {
+  display: inline; 
+}
+
+  .main-nav a {
+    font-size: 20px;
+  }
+  .main-nav ul {
     align-items: center;
   }
   .main-nav li {
@@ -264,16 +340,5 @@ nav a.split {
         margin-left: 15px;
     }
  
-  .main-nav-2 li {
-    margin: 10px 0;
-    font-size: 2rem;
-  }
   
-  .header-top-2 a img{
-    padding-left: 20px;
-  }
-  .secondary-nav {
-    position: relative;
-    font-size: x-small;
-  }
 }

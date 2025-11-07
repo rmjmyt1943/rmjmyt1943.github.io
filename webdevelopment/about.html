@@ -3,9 +3,9 @@
 
 <!--
 Name: Rodney Jones
-Date: 10/29/2025
+Date: 11/5/2025
 Page: About page
-Description: Print Query for About Page
+Description: Adding grids and flexbox to about page
 -->
 
 <head> <!--Contains metadata and browser instructions-->
@@ -26,60 +26,61 @@ Description: Print Query for About Page
             </div>
             <h1> Philo Sé Bible Study Club </h1> 
         </div>
-
+        
         <nav>
              <ul class="main-nav">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="events.html">Contents</a>
+                <li class="home"><a href="index.html">Home</a></li>
+                <li><a class="active-about" href="about.html">About</a></li>
+                <li><a href="events.html">Contents <span class="symbol">*</span></a>
                 <ul class="dropdown-2">
-                        <li><a href="#">Word of God</a></li>
-                        <li><a href="#">Family</a></li>
-                        <li><a href="#">Fellowship</a></li>
+                        <li class="dropdown-2-li"><a href="#">Word of God</a></li>
+                        <li class="dropdown-2-li"><a href="#">Family</a></li>
+                        <li class="dropdown-2-li"><a href="#">Fellowship</a></li>
                     </ul>
                 </li>
                 <li><a href="reflection.html">Reflection</a></li>
-                <li><a href="contact.html">Contact</a>
+                <li><a href="contact.html">Contact <span class="symbol">*</span></a>
                     <ul class="dropdown">
-                        <li><a href="#">Sign Up</a></li>
-                        <li><a href="#">Schedule Study</a></li>
-                        <li><a href="#">Frequently Asked Questions</a></li>
+                        <li class="dropdown-li"><a href="#">Sign Up</a></li>
+                        <li class="dropdown-li"><a href="#">Schedule Study</a></li>
+                        <li class="dropdown-li"><a href="#">Frequently Asked Questions</a></li>
                     </ul>
                 </li>
             <!-- <div class="secondary-nav-2"> -->
                     <!-- <li><a href="login" class="split">Notifications</a></li> -->
                     <!--<img src="World icon.jpg" alt="Globe Icon"> --> 
-                    <li><a href="lang" class="split">English</a></li>
+                    <!-- <li><a href="#" class="split">English</a></li> -->
                     <!-- <span class="search">Search</span> -->
             <!-- </div> -->
         </ul>
         </nav>   
         </header>
+    <main>
         <div class="origin">
-        <h1> Origin and Meaning of Philo Sé </h1> <!--Maybe add photo of Greek word and Bible-->
-        <video controls autoplay muted loop>
-            <source src="Media/PhiloSeVideo.mp4">
-            <source src="Media/IMG_2925.mov">
-            This browser does not support HTML5 audio!
-        </video>
-            <p>  The Greek word ‘φιλ σε’ <strong>(Philo se)</strong> means ‘I love you.’ That was the Apostle Peter’s answer when Jesus asked him three times, “Do you love Me?” <br><br>
-                As we are inspired to spread and create a positive environment on campus, our focus is on delivering love. <br><br>
-            Philo Sé Bible Study Club will show <strong>convincing proof</strong> that  
-                <em>Science, World History</em>, and other subjects that seem to contradict the Bible, support it.</p>
-                
-            </div>
+            <h1 class="h1-origin"> Origin and Meaning of Philo Sé </h1> <!--Maybe add photo of Greek word and Bible-->
+            <video controls autoplay muted loop>
+                <source src="Media/PhiloSeSeminar.MP4">
+                This browser does not support HTML5 audio!
+            </video>
+                <p class="p-origin">  The Greek word ‘φιλ σε’ <strong>(Philo sé)</strong> means ‘I love you.’ That was the Apostle Peter’s answer when Jesus asked him three times, “Do you love Me?” (<em> John 21:15-17 </em>)<br><br>
+                    As we are inspired to spread and create a positive environment on campus, our focus is on delivering love. <br><br>
+                Philo Sé Bible Study Club will <strong> show convincing proof</strong> that  
+                    <em>Science, World History</em>, and other subjects that seem to contradict the Bible, support it.
+                We use the original languages of the Bible i.e., Hebrew and Greek to authenticate the studies.</p>
             <div class="about-list">    
-            <ul>
-                <li>Love</li>
-                <li>Faith</li>
-                <li>Hope</li>
-                <li>Unity</li>
-                <li>Family</li>
-            </ul>
+                <ul>
+                    <li>Love</li>
+                    <li>Faith</li>
+                    <li>Hope</li>
+                    <li>Unity</li>
+                    <li>Family</li>
+                </ul>
             </div>
+        </div>
+        </main>
             <div id="vision"> <!--Container for vision content--> 
                 <div class="vision-about">
-                    <img src="Media/PhiloSeSeminar.JPG" alt="Philo Se in Seminar Room"> <!--Placeholder for group photo-->
+                    <br><br><br><img src="Media/PhiloSeSeminar.JPG" alt="Philo Se in Seminar Room"> <!--Placeholder for group photo-->
                         <p>The power of one person is weak, but if we all work together to solve the problems our campus is facing, the hopeful future of Mizzou will become a reality.  
                     We believe university students are the leaders of future generations who act for the real change of the Earth. 
                     When we come together centered on the love of a Mother, we can make a <strong>difference</strong>. We will devote
@@ -101,12 +102,14 @@ Description: Print Query for About Page
                 <div class="motto">
                     <h2>"As God always gives love, giving love is more blessed than receiving love" <em>(Act 20:35)</em> </h2>
                 </div>
+            </p>
+
+            <div class="line"></div>
      <footer> <!--section that contains your name and current date-->
-        <div class="line"></div>
-        <div class="footer-logo">
+            <div class="footer-logo">
         <img src="Logo_PhiloSe_Transparent-Copy.png" alt="Logo">
         </div>
-        <h1> Rodney Jones 10/29/2025</h1>
+        <h1> Rodney Jones 11/5/2025</h1>
         </footer>
     
     </body>
