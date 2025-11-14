@@ -290,6 +290,14 @@ nav a.split {
   display: none;
 }
 
+.hamburger {
+  display: none;
+}
+
+#menu-toggle:checked ~ .mobile-menu {
+  display: block;
+}
+
 @media screen and (max-width: 768px) {
   
   nav .main-nav {
@@ -312,12 +320,14 @@ nav a.split {
   }
 
   .dropdown {
+    display: none;
     position: static;
     border: 3px solid black;
     border-radius: 30px;
   }
 
   .dropdown-2 {
+    display: none;
     position: static;
     border: 3px solid black;
     border-radius: 30px;
@@ -326,6 +336,9 @@ nav a.split {
   .main-nav li:hover .symbol {
   display: inline; 
 }
+nav {
+    display: none;
+  }
 
   .main-nav a {
     font-size: 20px;
@@ -340,5 +353,16 @@ nav a.split {
         margin-left: 15px;
     }
  
-  
+  .hamburger {
+  display: block;
+  background-color: #2383c6;
+  font-size: 30px;
+  cursor: pointer;
+  color: black;
+  padding: 10px;
 }
+  #menu-toggle {
+    display: none;
+  }
+}
+

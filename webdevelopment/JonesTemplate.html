@@ -3,14 +3,14 @@
 
 <!--
 Name: Rodney Jones
-Date: 10/14/2025
+Date: 11/13/2025
 Page: Template
 Description: Adding nav and header to template
 -->
 
     <head> <!--Contains metadata and browser instructions-->
         <meta charset="utf-8"> <!--Character encoding-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Mobile-friendly layout-->
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!--Mobile-friendly layout-->
         <title> JonesTemplate </title> <!--Gives your page a title--> 
         <link rel="stylesheet" href="style.css"> <!--A link to an external CSS file-->
         <link rel="stylesheet" href="nav.css"> <!--A link to nav CSS file-->
@@ -55,6 +55,19 @@ Description: Adding nav and header to template
             <!-- </div> -->
         </ul>
         </nav>   
+        <div class="hamburger">
+            <input type="checkbox" id="menu-toggle" />
+            <label for="menu-toggle" class="hamburger">☰</label>
+            <nav class="mobile-menu">
+                <ul class="main-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="events.html">Contents</a></li>
+                <li><a href="reflection.html">Reflection</a></li>
+                <li><a href="contact.html">Contact</a></li>
+        </ul>
+            </nav>
+        </div>
         </header>
         
         <h1> Welcome to Philo Sé Bible Study Club! </h1> 
@@ -84,7 +97,7 @@ Description: Adding nav and header to template
             <a href="#">123-345-6789<br></a>
             <img src="Media/white1-email-32.png" alt="Email Icon">
             <a href="#">philoseclub@gmail.com</a>
-            <h1> Rodney Jones 10/29/2025</h1>
+            <h1> Rodney Jones 11/13/2025</h1>
         </footer>
     
     </body>
