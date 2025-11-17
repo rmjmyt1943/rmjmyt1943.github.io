@@ -52,14 +52,14 @@ nav .main-nav{
   padding: 5px;
 }
 
-.main-nav-2{
+/* .main-nav-2{
   display: flex;
   justify-content: space-between;
-}
+} */
 
-.flex-ul {
+/* .flex-ul {
   display: flex;
-}
+} */
 
 .main-nav {
   list-style: none;
@@ -99,6 +99,12 @@ nav .main-nav{
 }
 
 .main-nav a.active-reflection {
+  border: 2px solid #ffffff;
+  border-radius: 15px;
+  padding: 10px 15px;
+}
+
+.main-nav a.active-project {
   border: 2px solid #ffffff;
   border-radius: 15px;
   padding: 10px 15px;
@@ -248,13 +254,13 @@ nav .main-nav{
     color: #ffffff9a; /* Text color on hover */
 }
 
-.secondary-nav {
+/* .secondary-nav {
   display: flex;
   gap: 15px;
   margin-left: 150px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
-}
+} */
 
 nav a.split {
   float: right;

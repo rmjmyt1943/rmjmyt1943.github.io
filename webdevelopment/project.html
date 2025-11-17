@@ -1,0 +1,164 @@
+<!DOCTYPE html> <!--Declares the page as an HTML5 document-->
+<html lang="en-US"> <!--Root tag with a language attribute for accessibility-->
+
+<!--
+Name: Rodney Jones
+Date: 11/15/2025
+Page: Project page
+Description: Contents page for Philo Sé Club
+-->
+
+<head> <!--Contains metadata and browser instructions-->
+        <meta charset="utf-8"> <!--Character encoding-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Mobile-friendly layout-->
+        <title> Content - Philo Sé Club </title> <!--Gives your page a title--> 
+        <link rel="stylesheet" href="style.css"> <!--A link to an external CSS file-->
+        <link rel="stylesheet" href="nav.css"> <!--A link to nav CSS file-->
+        <link rel="icon" type="image/x-icon" href="Media/favicon.ico">
+    </head>
+
+    <body> <!--A sample heading for visual testing-->
+            
+    <header> <!--section that will later contain your logo and navigation-->
+        <div class="header-top">
+            <div class="site-logo">
+                <img src="Logo_PhiloSe_Transparent-Copy.png" alt="Circular emblem showing six hands in different skin tones forming a ring and cupping a bright blue heart at the center; white badge with thin black and blue border; outer text reads GIVING HOPE TO THE WORLD and PHILO SÉ CLUB; tone conveys warmth, unity, and hope">
+            </div>
+            <h1> Philo Sé Bible Study Club </h1> 
+        </div>
+
+        <nav>
+             <ul class="main-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a class= "active-about" href="project.html">Contents</a>
+                <ul class="dropdown-2">
+                        <li class="dropdown-2-li"><a href="#word-of-god">Word of God</a></li>
+                        <li class="dropdown-2-li"><a href="#family">Family</a></li>
+                        <li class="dropdown-2-li"><a href="#fellowship">Fellowship</a></li>
+                    </ul>
+                </li>
+                <li><a href="reflection.html">Reflection</a></li>
+                <li><a href="contact.html">Contact <span class="symbol">*</span></a>
+                    <ul class="dropdown">
+                        <li class="dropdown-li"><a href="#">Sign Up</a></li>
+                        <li class="dropdown-li"><a href="#">Schedule Study</a></li>
+                        <li class="dropdown-li"><a href="#">Frequently Asked Questions</a></li>
+                    </ul>
+                </li>
+            <!-- <div class="secondary-nav-2"> -->
+                    <!-- <li><a href="login" class="split">Notifications</a></li> -->
+                    <!--<img src="World icon.jpg" alt="Globe Icon"> --> 
+                    <li><a href="lang" class="split">English</a></li>
+                    <!-- <span class="search">Search</span> -->
+            <!-- </div> -->
+        </ul>
+        </nav>   
+        <div class="hamburger">
+            <input type="checkbox" id="menu-toggle" />
+            <label for="menu-toggle" class="hamburger">☰</label>
+            <nav class="mobile-menu">
+                <ul class="main-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="project.html">Contents</a></li>
+                <li><a href="reflection.html">Reflection</a></li>
+                <li><a href="contact.html">Contact</a></li>
+        </ul>
+            </nav>
+        </div>
+        </header>
+    <main>
+        <div class="content-title">
+            <h1> Bible Studies</h1>
+        </div>
+        <div class="row1" id="word-of-god">
+            <div class="row1-left">
+                <img src="Media/individual-pic.png" alt="Individual bible studies image">
+                <h2 class="individual-title">Individual</h2>
+                <div class="row1-leftbutton">
+                <button class="individualbtn"><a href="#">Learn More</a></button>
+            </div>
+            </div>
+
+            <div class="row1-captions">
+                <p> Join us for personalized Bible study sessions that cater to your unique spiritual journey. 
+                    Our one-on-one studies provide a supportive environment to explore scripture, ask questions, and deepen your faith at your own pace. 
+                    Whether you're new to the Bible or looking to strengthen your understanding, we are here to guide you every step of the way. 
+                    Sign up today and embark on a transformative journey through God's word! Every day after class, we host individual bible studies for those who don’t have much time to join our weekly group bible studies. 
+                    Our bible studies are interactive. We take turns reading, sharing realizations and draw scenes from the bible on the board. 
+                    We also watch videos of God’s creation to see the amazing work of Almighty God. </p>
+                    <br>
+                    <!-- <p> Our group Bible studies offer a dynamic and engaging way to connect with others while exploring the teachings of the Bible. 
+                    Join us in a welcoming community where we dive into scripture together and support one another in our spiritual growth. 
+                    Whether you're looking to deepen your understanding of the Bible or simply seeking the meaning of life, our group studies are the perfect place to start. 
+                    Come be a part of our vibrant community and experience the power of collective learning through God's word! We host weekly group bible studies every Thursday evening. 
+                    During these sessions, we read passages from the Bible, discuss their meanings, and share how they relate to our daily lives. 
+                    We also engage in activities such as role-playing biblical stories and group prayers to strengthen our faith and fellowship. 
+                    These gatherings provide a supportive environment where members can grow spiritually and build strong relationships with one another.</p> -->
+            </div>
+            <div class="row1-right">
+                <img src="Media/Group study.png" alt="Group bible studies image">
+                <h2 class="group-title"> Group </h2>
+                <div class="row1-rightbutton">
+                <button class="groupbtn"><a href="#">Learn More</a></button>
+            </div>
+            </div>
+
+            
+
+        </div>
+
+        <div class="row2" id="fellowship">
+            <div class="row2image">
+                <img src="Media/fellowship-pic.png" alt="Fellowship Events image">
+            </div>
+            
+            <div class="row2-captions">
+                <h2> Fellowship Events </h2>
+                <p>We create posters together, go to Venture Out at Mizzou, create escape rooms, scavenger hunts, and more. 
+                    This is a time where we have opportunities to network with different members of the club. 
+                    Sometimes, we travel out of state and go camping. 
+                Fellowship events are a cornerstone of our community, providing opportunities for members to connect, share experiences, and grow together in faith.</p>
+
+                    <br> 
+                <!-- <p> Fellowship events are a cornerstone of our community, providing opportunities for members to connect, share experiences, and grow together in faith. 
+                    These gatherings foster a sense of belonging and support, allowing individuals to build meaningful relationships while exploring -->
+            </div>
+            <div class="row2-button">
+                <button><a href="#">Learn More</a></button>
+            </div>
+        </div>
+
+        <div class="row3" id="family">
+            <div class="row3image">
+                <img src="Media/gamenight-pic.png" alt="Game nights image">
+            </div>
+            
+            <div class="row3-captions">
+                <h2> Game Nights & Volunteer Services </h2>
+                <p>We try to carry out volunteer services on and off campuses, such as shoveling snow, raking leaves, packing food at the food pantry, and more. 
+                    We play board games, host trivia nights, and laser tag. 
+                    Through this, we learn how to become one big family and learn to love each other though we have different backgrounds.</p>
+            </div>
+            <div class="row3-button">
+                <button><a href="#">Learn More</a></button>
+            </div>
+        </div>
+    </main>
+
+            <div class="line"></div>
+     <footer> <!--section that contains your name and current date-->
+            <div class="footer-logo">
+        <img src="Logo_PhiloSe_Transparent-Copy.png" alt="Logo">
+        </div>
+        <h1> Rodney Jones 11/15/2025</h1>
+        </footer>
+    
+    </body>
+
+
+</html>
+
+
+

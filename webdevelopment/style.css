@@ -22,6 +22,14 @@ h1 {
 p {
   font-size: 26px;
 }
+  /* Project page: make rows stack and images fit on small screens */
+  .content-title {
+    font-size: 28px;
+    margin-top: 10px;
+    padding: 8px;
+    text-align: center;
+  }
+
 
 
 html {
@@ -178,15 +186,18 @@ html {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas: 
-    "h1-origin h1-origin h1-origin h1-origin"
-    "p-origin p-origin video video"
-    /* "about-list about-list video video" */
+    "p-origin h1-origin h1-origin h1-origin"
+    "p-origin video video video"
 }
 
-.origin h1 {
-  grid-area: h1-origin;
+/* .origin {
+  display:flex;
+  flex-direction: column;
+} */
+
+.h1-origin {
   text-decoration: underline;
-  font-size: 36pt;
+  font-size: 30pt;
   justify-self: center;
   padding: 25px;
   /* margin-left: 550px; */
@@ -194,29 +205,26 @@ html {
 
 .origin p {
   grid-area: p-origin;
-  margin-left: 125px;
-  font-size: 24pt;
+  margin-left: 150px;
+  width: 80%;
+  font-size: 16pt;
   line-height: 1.5;
-  padding-right: 25px;
-  margin-top: 15px;
-  /* font-weight: bold; */
   color: black;
 }
 video {
   border: 4px solid #000000;
   grid-area: video;
-  width: 650px;
-  margin-right: 125px;
-  margin-left: 20px;
-  margin-top: -20px;
+  width: 60%;
+  margin-left: 100px;
+  margin-top: 10px;
 }
 
 .about-list ul {
   list-style-type: none;
   gap: 150px;
   margin-left: 250px;
-  padding-top: 10px;
-  font-size: 30px;  
+  padding-top: 30px;
+  font-size: 24px;  
   display: flex;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -246,7 +254,7 @@ video {
 }
 
 .vision-about p{
-  font-size: 24pt;
+  font-size: 16pt;
   padding: 0px 20px 20px 125px;
   line-height: 2;
   margin-top: -15px;
@@ -256,7 +264,7 @@ video {
 .vision-about img {
   border: 4px solid #000000; 
   float: left;
-  width: 650px;
+  width: 30%;
   margin-left: 125px;
   margin-right: 100px;
 }
@@ -344,12 +352,14 @@ video {
 .motto h2{
   font-size: 26px;
   padding: 15px;
-  margin: 100px 190px 0;
+  margin: 100px 190px;
   border: #000000 solid 3px;
   border-radius: 25px;
   background-color: #2383c6;
   font-family: Arial, Helvetica, sans-serif;
   color: #ffffff;
+  position: relative;
+  top: 20px;
   text-align: center;
 } 
 
@@ -592,6 +602,232 @@ textarea {
   height: 100px;
 }
 
+/* Project page */
+
+/* Row1 */
+
+.content-title h1 {
+  text-align: center;
+  font-size: 30px;
+  margin: 20px;
+  margin-top: 20px;
+  padding-bottom: 10px;
+  color: #000000;
+  text-decoration: underline;
+}
+
+.row1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: 
+    "individualimage row1-captions groupimage"
+    "individual-title row1-captions group-title"
+    "row1-leftbutton row1-captions row1-rightbutton";
+    ;
+  gap: 20px;
+}
+
+.row1-left img {
+  width: 250px;
+  margin-left: 150px;
+  margin-top: -40px;
+}
+
+.row1-right img {
+  width: 250px;
+  margin-left: 75px;
+  margin-top: -40px;
+}
+
+.row1-captions p{
+  font-size: 20px;
+  color: #000000;
+  grid-area: row1-captions;
+  margin-top: -20px;
+  width: 970px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.row1 .individual-title {
+  grid-area: individual-title;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 24px;
+  margin-left: 110px;
+}
+
+.row1 .group-title {
+  grid-area: group-title;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 24px;
+  margin-right: 40px;
+}
+.row1-rightbutton {
+  grid-area: row1-rightbutton;
+  text-align: center;
+  position: relative;
+  right: 200px;
+}
+
+.row1-leftbutton {
+  grid-area: row1-leftbutton;
+  text-align: center;
+  position: relative;
+  right: 120px;
+}
+
+.row1 button { 
+  font-size: 20px; 
+  background-color: #bac0c7; 
+  padding: 10px 50px; 
+  border-radius: 20px; 
+  text-decoration: none; 
+  margin-left: 40px;
+  margin-top: 10px;
+  font-weight: bold;
+  position: relative;
+  left: 155px;
+  box-shadow: 0 15px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer; 
+}
+
+.row1 button:hover {
+  background-color: #2383c6; 
+  color: white; 
+}
+
+.row1 a:hover {
+  color: #ffffff;   
+}
+
+/* Row2 */
+
+.row2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: 
+    "row2image row2imagecaption ."
+    "row2-captions row2-captions row2-button"
+    "row2-captions row2-captions .";
+  padding: 30px 0px 30px 0px;
+  background-color: #2383c6;
+}
+
+.row2image img{
+  width: 57%;
+  margin-left: 147px;
+}
+
+.row2-captions p{
+  font-size: 20px;
+  color: #ffffff;
+  width: 900px;
+  margin-left: 70px;
+}
+
+.row2-captions h2 {
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  
+  padding-bottom: 10px;
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+.row2 button { 
+  font-size: 20px; 
+  grid-area: row2-button;
+  background-color: #bac0c7; 
+  padding: 10px 50px; 
+  border-radius: 20px; 
+  text-decoration: none;   
+  margin-top: 70px;
+  margin-left: 110px;
+  font-weight: bold;
+  /* position: relative;
+  left: 355px; */
+  justify-items: center;
+  box-shadow: 0 15px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer; 
+}
+
+.row2 button:hover {
+  background-color: #ffffff; 
+  color: #2383c6; 
+}
+
+.row2 a:hover {
+  color: #2383c6;   
+}
+
+/* Row3 */  
+
+.row3image img{
+  float: right;
+  width: 14%;
+  margin-right: 100px;
+  margin-top: 15px;
+}
+
+.row3-captions h2 {
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  margin-left: 350px;
+  justify-content: center;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  text-decoration: underline;
+  color: #000000;
+}
+
+.row3-captions p {
+  position: relative;
+  left: 100;
+}
+
+.row3 button { 
+  font-size: 20px; 
+  background-color: #bac0c7; 
+  padding: 10px 50px; 
+  border-radius: 20px; 
+  text-decoration: none; 
+  margin-left: 40px;
+  margin-top: 10px;
+  font-weight: bold;
+  position: relative;
+  left: 25px;
+  bottom: 50px;
+  box-shadow: 0 15px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer; 
+}
+
+.row3 button:hover {
+  background-color: #2383c6; 
+  color: white; 
+}
+
+.row3 a:hover {
+  color: #ffffff;   
+}
+
+.row3-captions p{
+  font-size: 20px;
+  width: 900px;
+  margin-left: 370px;
+  line-height: 1.7;
+}
+
+
 @media only screen and (max-width: 768px) {
   p {
     font-size: 14px;
@@ -621,6 +857,7 @@ textarea {
   .hero {
     background-position: center center;
   }
+ 
 } 
 
 /* About Page */
@@ -713,4 +950,120 @@ textarea {
   } */
 
 
+}
+
+/* Content page */
+
+@media screen and (max-width: 768px) {
+ .row1 {
+    display: block;
+    grid-template-columns: none;
+    gap: 10px;
+    padding: 0 10px;
+  }
+
+  .row1-left img,
+  .row1-right img {
+    width: 100%;
+    margin: 10px 0;
+    margin-left: 0;
+  }
+
+  .row1-captions p {
+    width: auto;
+    font-size: 16px;
+    padding: 0 10px 10px 10px;
+    line-height: 1.5;
+  }
+
+  .row1 .individual-title,
+  .row1 .group-title {
+    font-size: 24px;
+    padding: 8px 0;
+    margin: 0;
+    text-align: center;
+  }
+
+  .row1-leftbutton,
+  .row1-rightbutton {
+    position: static;
+    margin: 10px auto;
+    right: 0;
+    left: 0;
+    text-align: center;
+  }
+
+  .row2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+    gap: 16px;
+  }
+
+  .row2image img {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .row2imagecaption {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .row2imagecaption h2 {
+    font-size: 28px;
+    text-align: center;
+    margin: 0 10px;
+  }
+
+  .row2-captions p {
+    padding: 10px;
+    font-size: 16px;
+    width: auto;
+    margin-left: 0;
+    color: #ffffff;
+  }
+
+  .row3image img {
+    width: 100%;
+    margin: 0;
+    float: none;
+  }
+
+  .row3-captions h2 {
+    font-size: 20px;
+    text-align: center;
+    margin: 0 8px;
+    padding: 6px 0;
+  }
+
+  .row3-captions p {
+    width: auto;
+    margin: 8px 12px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #000000;
+    text-align: left;
+  }
+  
+  .row1-leftbutton button,
+  .row1-rightbutton button,
+  .row2 button,
+  .row3 button {
+    font-size: 18px;
+    padding: 10px 30px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    width: 80%;
+    max-width: 360px;
+    display: block;
+    margin: 12px auto;
+    position: static;
+    left: auto;
+    right: auto;
+    box-shadow: 0 10px 6px rgba(0,0,0,0.08);
+  }
 }
