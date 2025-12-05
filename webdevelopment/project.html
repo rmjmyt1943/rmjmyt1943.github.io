@@ -14,17 +14,57 @@ Description: Contents page for Philo Sé Club
         <title> Content - Philo Sé Club </title> <!--Gives your page a title--> 
         <link rel="stylesheet" href="style.css"> <!--A link to an external CSS file-->
         <link rel="stylesheet" href="nav.css"> <!--A link to nav CSS file-->
+        <!-- Custom font used here -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
         <link rel="icon" type="image/x-icon" href="Media/favicon.ico">
     </head>
 
     <body> <!--A sample heading for visual testing-->
             
     <header> <!--section that will later contain your logo and navigation-->
-        <div class="header-top">
+            <div class="header-top">
             <div class="site-logo">
                 <img src="Logo_PhiloSe_Transparent-Copy.png" alt="Circular emblem showing six hands in different skin tones forming a ring and cupping a bright blue heart at the center; white badge with thin black and blue border; outer text reads GIVING HOPE TO THE WORLD and PHILO SÉ CLUB; tone conveys warmth, unity, and hope">
             </div>
             <h1> Philo Sé Bible Study Club </h1> 
+            <div class="header-actions" aria-hidden="false">
+                <div class="search-container" aria-hidden="false">
+                  <input id="site-search" class="search-box" type="search" placeholder="Search site..." aria-label="Search site">
+                </div>
+            <!-- For later -->
+                <button class="icon-button icon-search" aria-label="Search">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><title>Search</title><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zM10 15a5 5 0 110-10 5 5 0 010 10z"/></svg>
+                </button>
+
+                <button id="notif-button" class="icon-button icon-bell" aria-label="Notifications" aria-expanded="false">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><title>Notifications</title><path d="M12 22a2 2 0 002-2H10a2 2 0 002 2zm6-6V10c0-3.07-1.63-5.64-4.5-6.32V3a1.5 1.5 0 10-3 0v.68C7.63 4.36 6 6.92 6 10v6l-2 2v1h16v-1l-2-2z"/></svg>
+                    <span id="bell-badge" class="bell-badge hidden" aria-hidden="true">0</span>
+                </button>
+
+                <div id="notif-list" class="notif-list" role="menu" aria-hidden="true" aria-labelledby="notif-button">
+                    <div class="notif-header">
+                        <strong>Notifications</strong>
+                        <button id="mark-read-btn" class="mark-read-btn" type="button">Mark all read</button>
+                    </div>
+                    <ul>
+                        <li class="notif-item unread" tabindex="0" data-id="1">
+                            <div class="notif-badge" aria-hidden="true"></div>
+                            <div class="notif-text">New event: Campus Bible Study this Friday at 7pm.</div>
+                            <div class="notif-time">2h</div>
+                        </li>
+                        <li class="notif-item unread" tabindex="0" data-id="2">
+                            <div class="notif-badge" aria-hidden="true"></div>
+                            <div class="notif-text">Reminder: Volunteer meeting tomorrow at 5pm.</div>
+                            <div class="notif-time">1d</div>
+                        </li>
+                        <li class="notif-item" tabindex="0" data-id="3">
+                            <div class="notif-text">Weekly posted: 'Love One Another'.</div>
+                            <div class="notif-time">3d</div>
+                        </li>
+                    </ul>
+                    <div class="notif-empty" style="display:none;">No notifications</div>
+                </div>
+            </div>
         </div>
 
         <nav>
@@ -49,7 +89,7 @@ Description: Contents page for Philo Sé Club
             <!-- <div class="secondary-nav-2"> -->
                     <!-- <li><a href="login" class="split">Notifications</a></li> -->
                     <!--<img src="World icon.jpg" alt="Globe Icon"> --> 
-                    <li><a href="lang" class="split">English</a></li>
+                    <!-- <li><a href="lang" class="split">English</a></li> -->
                     <!-- <span class="search">Search</span> -->
             <!-- </div> -->
         </ul>
@@ -88,20 +128,22 @@ Description: Contents page for Philo Sé Club
                     Sign up today and embark on a transformative journey through God's word! Every day after class, we host individual bible studies for those who don’t have much time to join our weekly group bible studies. 
                     Our bible studies are interactive. We take turns reading, sharing realizations and draw scenes from the bible on the board. 
                     We also watch videos of God’s creation to see the amazing work of Almighty God. </p>
-                    <br>
-                    <!-- <p> Our group Bible studies offer a dynamic and engaging way to connect with others while exploring the teachings of the Bible. 
-                    Join us in a welcoming community where we dive into scripture together and support one another in our spiritual growth. 
-                    Whether you're looking to deepen your understanding of the Bible or simply seeking the meaning of life, our group studies are the perfect place to start. 
-                    Come be a part of our vibrant community and experience the power of collective learning through God's word! We host weekly group bible studies every Thursday evening. 
-                    During these sessions, we read passages from the Bible, discuss their meanings, and share how they relate to our daily lives. 
-                    We also engage in activities such as role-playing biblical stories and group prayers to strengthen our faith and fellowship. 
-                    These gatherings provide a supportive environment where members can grow spiritually and build strong relationships with one another.</p> -->
+                    
             </div>
             <div class="row1-right">
                 <img src="Media/Group study.png" alt="Group bible studies image">
                 <h2 class="group-title"> Group </h2>
                 <div class="row1-rightbutton">
                 <button class="groupbtn"><a href="#">Learn More</a></button>
+
+                <div class="row1-captions2">
+                <p> Our group Bible studies offer a dynamic and engaging way to connect with others while exploring the teachings of the Bible. 
+                    Join us in a welcoming community where we dive into scripture together and support one another in our spiritual growth. 
+                    Whether you're looking to deepen your understanding of the Bible or simply seeking the meaning of life, our group studies are the perfect place to start. 
+                    Come be a part of our vibrant community and experience the power of collective learning through God's word! We host weekly group bible studies every Thursday evening. 
+                    During these sessions, we read passages from the Bible, discuss their meanings, and share how they relate to our daily lives. 
+                    We also engage in activities such as role-playing biblical stories and group prayers to strengthen our faith and fellowship. 
+                    These gatherings provide a supportive environment where members can grow spiritually and build strong relationships with one another.</p></div>
             </div>
             </div>
 
@@ -158,45 +200,67 @@ Description: Contents page for Philo Sé Club
                         </thead>
                         <tbody>
                             <tr>
-                                <th scope="row">Individual Bible Study</th>
-                                <td>Daily</td>
-                                <td>Student Center</td>
+                                <th scope="row" data-label="Event">Individual Bible Study</th>
+                                <td data-label="When">Daily</td>
+                                <td data-label="Location">Student Center</td>
                             </tr>
                             <tr>
-                                <th scope="row">Group Bible Study</th>
-                                <td>Thursdays</td>
-                                <td>Various (see group chat)</td>
+                                <th scope="row" data-label="Event">Group Bible Study</th>
+                                <td data-label="When">Thursdays</td>
+                                <td data-label="Location">Various (see group chat)</td>
                             </tr>
                             <tr>
-                                <th scope="row">Fellowship Events</th>
-                                <td>Monthly</td>
-                                <td>Various (see group chat)</td>
+                                <th scope="row" data-label="Event">Fellowship Events</th>
+                                <td data-label="When">Monthly</td>
+                                <td data-label="Location">Various (see group chat)</td>
                             </tr>
                             <tr>
-                                <th scope="row">Game Nights</th>
-                                <td>Every Other Month</td>
-                                <td>Student Center &amp; campus spaces</td>
+                                <th scope="row" data-label="Event">Game Nights</th>
+                                <td data-label="When">Every Other Month</td>
+                                <td data-label="Location">Student Center &amp; campus spaces</td>
                             </tr>
                             <tr>
-                                <th scope="row">Volunteer Services</th>
-                                <td>Occasional </td>
-                                <td>Community &amp; off-campus locations</td>
+                                <th scope="row" data-label="Event">Volunteer Services</th>
+                                <td data-label="When">Occasional</td>
+                                <td data-label="Location">Community &amp; off-campus locations</td>
                             </tr>
                         </tbody>
                     </table>
                 </section>
     </main>
+    <h2>Rodney Jones — 11/20/2025</h2>
+     <footer>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="Logo_PhiloSe_Transparent-Copy.png" alt="Philo Sé Club logo">
+                </div>
 
-            <div class="line"></div>
-     <footer> <!--section that contains your name and current date-->
-            <div class="footer-logo">
-        <img src="Logo_PhiloSe_Transparent-Copy.png" alt="Logo">
-        </div>
-        <h1> Rodney Jones 11/20/2025</h1>
+                <div class="contact-links" aria-label="Contact links">
+                    <div class="contact-item">
+                        <a class="contact-link email" href="mailto:philoseclub@gmail.com" aria-label="Email Philo Sé Club">
+                            <svg class="contact-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+                                <title>Email</title>
+                                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                        </a>
+                        <a class="contact-text" href="mailto:philoseclub@gmail.com">philoseclub@gmail.com</a>
+                    </div>
+
+                    <div class="contact-item">
+                        <a class="contact-link phone" href="tel:+1234567890" aria-label="Call Philo Sé Club">
+                            <svg class="contact-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+                                <title>Phone</title>
+                                <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.27 11.36 11.36 0 003.56.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.56 1 1 0 01-.27 1.11l-2.18 2.12z"/>
+                            </svg>
+                        </a>
+                        <a class="contact-text" href="tel:+1234567890">+1 (234) 567-890</a>
+                    </div>
+                </div>
+            </div>
         </footer>
     
+        <!-- <script src="nav.js"></script> -->
     </body>
-
 
 </html>
 

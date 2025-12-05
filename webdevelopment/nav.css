@@ -26,10 +26,361 @@
   margin: 7px 10px 5px 0;
 }
 
-.footer-logo img{
-  width: 60px;
-  padding-left: 45px;
-  margin: 7px 10px 5px 0;
+/* header logo and title */
+@media screen and (max-width: 768px) {
+  .header-top {  
+    gap: 8px; 
+  }
+  .header-top img { 
+    width: 48px; 
+    margin-left: 10px;
+  }
+  .header-top h1 { 
+    font-size: 17px; 
+    margin: 8px 6px; 
+    line-height: 1.1; 
+  }
+}
+
+/* Header action buttons (search, notifications) */
+.header-actions {
+  margin-left: auto;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding-right: 20px;
+  position: relative; /* anchor absolute dropdowns */
+}
+
+.icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: #2383c6;
+  color: #fff;
+  border: 2px solid #000;
+  cursor: pointer;
+}
+.icon-button svg { 
+  width: 20px; 
+  height: 20px; 
+  fill: currentColor; 
+}
+.icon-button:focus { 
+  outline: 3px solid rgba(35,131,198,0.24); 
+  outline-offset: 2px; 
+}
+
+/* Hover / interaction effects for header icons */
+.icon-button {
+  transition: transform 160ms cubic-bezier(.2,.9,.2,1), box-shadow 180ms ease, filter 120ms ease, background-color 120ms ease;
+  will-change: transform, box-shadow;
+}
+.icon-button:hover,
+.icon-button:focus-visible {
+  transform: translateY(-2px) scale(1.06);
+  box-shadow: 0 10px 22px rgba(12,24,48,0.16);
+  filter: brightness(1.03);
+}
+.icon-button:active {
+  transform: translateY(0) scale(0.99);
+  box-shadow: 0 6px 14px rgba(12,24,48,0.12);
+}
+
+.icon-button.icon-search:hover svg {
+  transform: scale(1.08);
+  transition: transform 160ms ease;
+}
+.icon-button.icon-bell:hover svg {
+  transform: rotate(-10deg) scale(1.03);
+  transition: transform 220ms ease;
+}
+.icon-button.icon-bell:active svg { transform: rotate(0deg) scale(0.98); }
+
+/* Bell icon badge */
+.icon-button.icon-bell { 
+  position: relative; 
+}
+.bell-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  background: #ef4444;
+  color: #fff;
+  border-radius: 999px;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.18);
+  display: inline-block;
+}
+.bell-badge.hidden { display: none; }
+
+/* Animation for bell when new notification arrives */
+@keyframes bell-pulse {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(239,68,68,0.0); }
+  30% { transform: scale(1.18); box-shadow: 0 6px 20px rgba(35,131,198,0.12); }
+  60% { transform: scale(1.06); box-shadow: 0 6px 18px rgba(35,131,198,0.08); }
+ 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(239,68,68,0); }
+}
+.bell-badge.pulse { animation: bell-pulse .9s cubic-bezier(.2,.9,.2,1); }
+
+/* Larger sizes for search and bell buttons */
+.icon-button.icon-bell,
+.icon-button.icon-search {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+}
+.icon-button.icon-bell svg,
+.icon-button.icon-search svg { 
+  width: 22px; 
+  height: 22px; 
+}
+/* add spacing to the right of the bell (after it) */
+.icon-button.icon-bell { 
+  margin-right: 26px; 
+}
+.icon-button.icon-search { 
+  margin-right: 16px; 
+}
+
+/* adjust badge position for larger bell */
+.icon-button.icon-bell .bell-badge {
+  top: -8px;
+  right: -8px;
+  min-width: 20px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 12px;
+}
+
+/* Responsive: use smaller buttons/icons on narrow screens */
+@media screen and (max-width: 768px) {
+  .icon-button.icon-bell,
+  .icon-button.icon-search {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+  }
+  .icon-button.icon-bell svg,
+  .icon-button.icon-search svg { 
+    width: 18px; 
+    height: 18px; 
+  }
+  .icon-button.icon-search { 
+    margin-right: 10px; 
+  }
+  .icon-button.icon-bell .bell-badge {
+    top: -6px;
+    right: -6px;
+    min-width: 16px;
+    height: 16px;
+    line-height: 16px;
+    font-size: 11px;
+  }
+  /* reduce spacing after bell on medium screens */
+  .icon-button.icon-bell { 
+    margin-right: 10px; 
+  }
+}
+
+/* Further reduce on very small screens where header actions might be hidden */
+@media screen and (max-width: 480px) {
+  .icon-button.icon-bell,
+  .icon-button.icon-search {
+    width: 36px;
+    height: 36px;
+  }
+  .icon-button.icon-bell svg,
+  .icon-button.icon-search svg { 
+    width: 16px; 
+    height: 16px; 
+  }
+  .icon-button.icon-search { 
+    margin-right: 8px; 
+  }
+  .icon-button.icon-bell .bell-badge {
+    top: -5px;
+    right: -5px;
+    min-width: 14px;
+    height: 14px;
+    line-height: 14px;
+    font-size: 10px;
+  }
+  /* small screens: keep spacing modest */
+  .icon-button.icon-bell { margin-right: 8px; }
+}
+
+/* Animation for newly added notification list item */
+@keyframes notif-new {
+  0% { background: rgba(35,131,198,0.12); transform: translateY(-8px); opacity: 0; }
+  40% { background: rgba(35,131,198,0.06); transform: translateY(0); opacity: 1; }
+  100% { background: transparent; }
+}
+.notif-item.new-arrival { animation: notif-new 900ms ease forwards; }
+
+/* Notification dropdown */
+.notif-list {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    width: 300px;
+    max-height: 60vh;
+    overflow: auto;
+    background: #ffffff;
+    color: #222;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(12,24,48,0.18);
+    border: 1px solid rgba(0,0,0,0.08);
+    padding: 8px;
+    z-index: 1200;
+    opacity: 0;
+    transform: translateY(-6px) scale(.995);
+    pointer-events: none;
+    visibility: hidden;
+    transition: opacity .12s ease, transform .14s ease, visibility .12s;
+}
+.notif-list.open {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+    visibility: visible;
+}
+.notif-list ul { 
+  list-style: none; 
+  margin: 0; 
+  padding: 0; 
+}
+.notif-item { 
+  display: flex; 
+  gap: 8px; 
+  align-items: center; 
+  padding: 10px 8px; 
+  border-radius: 6px; 
+  color: inherit; 
+  text-decoration: none; 
+  cursor: pointer; 
+}
+.notif-item + .notif-item { 
+  border-top: 1px solid rgba(0,0,0,0.05); 
+}
+.notif-item .notif-text { 
+  flex: 1; 
+  font-size: 15px; 
+  line-height: 1.3; 
+}
+.notif-item .notif-time { 
+  color: #6b7280; 
+  font-size: 13px; 
+  margin-left: 8px; 
+  flex-shrink: 0; 
+}
+.notif-empty { 
+  padding: 18px 12px; 
+  color: #6b7280; 
+  text-align: center; 
+}
+
+.notif-badge { 
+  width: 10px; 
+  height: 10px; 
+  background: #ef4444; 
+  border-radius: 999px; 
+  flex-shrink: 0; 
+  margin-right: 6px; 
+}
+.notif-item.unread { 
+  background: linear-gradient(90deg, rgba(88,133,196,0.04), transparent); }
+.notif-item.unread .notif-text { 
+  font-weight: 600; 
+}
+.notif-item.unread .notif-time { 
+  font-weight: 500; 
+}
+.notif-item:focus { 
+  outline: 3px solid rgba(35,131,198,0.16); outline-offset: 2px; 
+}
+
+/* Header inside dropdown */
+.notif-header { 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  padding: 8px 6px 10px 6px; 
+  border-bottom: 1px solid rgba(0,0,0,0.06); 
+  margin-bottom: 6px; 
+}
+.notif-header strong { 
+  font-size: 17px; 
+  font-weight: 700; 
+}
+.mark-read-btn { 
+  background: transparent; 
+  border: 0; 
+  color: #2563eb; 
+  cursor: pointer; 
+  font-size: 13px; 
+  padding: 6px 8px; 
+  border-radius: 6px; 
+}
+.mark-read-btn:hover { 
+  background: rgba(37,99,235,0.06); 
+}
+
+@media screen and (max-width: 480px) {
+  /* hide header actions on very small screens to save space */
+  .header-actions { display: none; }
+}
+
+/* Search input container in header */
+.search-container {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+.search-box {
+  width: 0;
+  opacity: 0;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 2px solid #000;
+  transition: width 180ms ease, opacity 180ms ease, padding 180ms ease;
+  background: #fff;
+  color: #222;
+  box-sizing: border-box;
+}
+.search-container.open .search-box {
+  width: 220px;
+  opacity: 1;
+  padding: 6px 10px;
+}
+
+/* Small tweak for very small screens */
+@media screen and (max-width: 600px) {
+  .search-container.open .search-box { width: 140px; }
+}
+
+/* Footer logo overrides when used inside the footer area */
+.footer-content .footer-logo {
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+}
+.footer-content .footer-logo img {
+  width: 48px;
+  height: auto;
+  margin: 0 12px 0 0;
+}
+
+@media screen and (max-width: 480px) {
+  .footer-content .footer-logo img { width: 40px;}
 }
 
 .header-top-2 a img{
@@ -318,7 +669,8 @@ nav a.split {
 
   .header-top img{
     justify-content: center;
-    margin-left: 45px;
+    margin: 0;
+    padding: 0;
   }
 
   .main-nav a {
@@ -371,4 +723,163 @@ nav {
     display: none;
   }
 }
+
+  /* Footer contact icons + animation */
+  footer {
+    padding: 14px 20px;
+    background: #2383c6; /* match nav background */
+  }
+  .footer-content {
+    /* grid: logo | centered heading | contact links */
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+  }
+  .footer-content h1 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff; /* ensure readable on blue background */
+    margin: 0;
+  }
+  .contact-links {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-self: end; /* place in the right column */
+    margin-left: 0;
+  }
+  .contact-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: #2383c6; /* default background */
+    box-sizing: border-box; /* include border in size */
+    border: 2px solid #ffffff; /* black border for icons */
+    color: #fff;
+    text-decoration: none;
+    transition: transform 180ms cubic-bezier(.2,.9,.3,1), box-shadow 220ms ease, background 180ms ease;
+    transform-origin: center center;
+    will-change: transform, box-shadow;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .contact-link:focus {
+    outline: 3px solid rgba(35,131,198,0.24);
+    outline-offset: 3px;
+  }
+  .contact-icon {
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+    transition: transform 180ms ease, filter 220ms ease;
+  }
+  .contact-link.email { background: #bac0c7; }
+  .contact-link.phone { background: #bac0c7; }
+
+  .contact-link:hover,
+  .contact-link:focus-visible,
+  .contact-link:active {
+    transform: scale(1.08);
+    filter: saturate(1.05);
+    cursor: pointer;
+  }
+
+  /* Soft pulsing glow on hover */
+  .contact-link:hover,
+  .contact-link:focus-visible,
+  .contact-link:active {
+    /* start pulsing */
+    animation: contact-glow 1.6s ease-in-out infinite;
+    -webkit-animation-duration: 1.6s;
+    -webkit-animation-timing-function: ease-in-out;
+  }
+
+  /* Contact item (icon + text) */
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .contact-text {
+    color: #ffffff; 
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 8px;
+    transition: background 180ms ease, color 180ms ease, transform 150ms ease;
+  }
+
+  .contact-text:hover,
+  .contact-text:focus {
+    background: rgba(35,131,198,0.06);
+    color: #0b3a5a;
+    outline: none;
+  }
+
+  @keyframes contact-glow {
+    0% { box-shadow: 0 0 0 rgba(0,0,0,0); }
+    30% { box-shadow: 0 6px 18px rgba(35,131,198,0.18); }
+    60% { box-shadow: 0 10px 28px rgba(35,131,198,0.22); }
+    100% { box-shadow: 0 0 0 rgba(0,0,0,0); }
+  }
+
+  /* Slightly stronger glow for phone (green) variant */
+  .contact-link.phone:hover,
+  .contact-link.phone:focus-visible,
+  .contact-link.phone:active { animation: contact-glow-phone 1.6s ease-in-out infinite; }
+  @keyframes contact-glow-phone {
+    0% { box-shadow: 0 0 0 rgba(0,0,0,0); }
+    30% { box-shadow: 0 6px 18px rgba(46,175,122,0.16); }
+    60% { box-shadow: 0 10px 28px rgba(46,175,122,0.22); }
+    100% { box-shadow: 0 0 0 rgba(0,0,0,0); }
+  }
+
+  /* Purple glow for email (matches site accent) */
+  .contact-link.email:hover,
+  .contact-link.email:focus-visible,
+  .contact-link.email:active { animation: contact-glow-email 1.6s ease-in-out infinite; }
+  @keyframes contact-glow-email {
+    0% { box-shadow: 0 0 0 rgba(0,0,0,0); }
+    30% { box-shadow: 0 6px 18px rgba(89,46,207,0.16); }
+    60% { box-shadow: 0 10px 28px rgba(89,46,207,0.22); }
+    100% { box-shadow: 0 0 0 rgba(0,0,0,0); }
+  }
+
+  /* Hover background colors for email and phone icons */
+  .contact-link.email:hover,
+  .contact-link.email:focus-visible,
+  .contact-link.email:active {
+    background: #592ecf; 
+    color: #fff;
+  }
+
+  .contact-link.phone:hover,
+  .contact-link.phone:focus-visible,
+  .contact-link.phone:active {
+    background: #592ecf; 
+    color: #fff;
+  }
+
+  /* On wider screens */
+  @media screen and (min-width: 480px) {
+    .contact-links { 
+      justify-self: end; 
+    }
+
+.contact-text {
+    color: #ffffff; 
+    font-size: 14px;
+    font-weight: 400;
+    padding: 0;
+    border-radius: 8px;
+    transition: background 180ms ease, color 180ms ease, transform 150ms ease;
+  }
+
+  }
 

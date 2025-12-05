@@ -1,3 +1,4 @@
+/* Custom font from Google Fonts applied to site */
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
 
 /* General Styles
@@ -13,10 +14,18 @@ body {
   padding: 0;
 }
 
-h1 {
-  color: #000000; /* Transparent color */
+/* Custom styles for all <h1 or h2> elements */
+h1, h2 {
+  color: #000000; /* heading color */
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 40px;
+  /* subtle tracking for readability */
+  letter-spacing: 0.6px;
+  /* soft drop for depth */
+  text-shadow: 0 2px 6px rgba(0,0,0,0.12);
+  /* give headings a light underline for emphasis */
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: rgba(35,131,198,0.12);
 }
 
 p {
@@ -29,6 +38,11 @@ p {
     padding: 8px;
     text-align: center;
   }
+
+/* Custom font from Google Fonts applied to site */
+.content-title, .content-title h1 {
+  font-family: 'Montserrat', sans-serif;
+}
 
 
 
@@ -50,7 +64,6 @@ html {
   background-size: contain;
   background-position: 900px -110px;
 } 
-
 
 .info p{
   color: black;
@@ -214,9 +227,10 @@ html {
 video {
   border: 4px solid #000000;
   grid-area: video;
-  width: 60%;
+  width: 65%;
   margin-left: 100px;
-  margin-top: 10px;
+  position: relative;
+  bottom: 70px;
 }
 
 .about-list ul {
@@ -514,7 +528,7 @@ footer a:hover {
 
 .contact-hero img {
   width: 100%;
-  height: 700px;
+  height: 800px;
   border: 3px solid #000000; 
   margin-top: 20px;
 }
@@ -629,13 +643,12 @@ textarea {
 
 .row1-left img {
   width: 250px;
-  margin-left: 150px;
+  margin-left: 10px;
   margin-top: -40px;
 }
 
 .row1-right img {
-  width: 250px;
-  margin-left: 75px;
+  width: 240px;
   margin-top: -40px;
 }
 
@@ -654,7 +667,7 @@ textarea {
   text-align: center;
   text-decoration: underline;
   font-size: 24px;
-  margin-left: 110px;
+  margin-left: 10px;
 }
 
 .row1 .group-title {
@@ -662,20 +675,19 @@ textarea {
   text-align: center;
   text-decoration: underline;
   font-size: 24px;
-  margin-right: 40px;
 }
 .row1-rightbutton {
   grid-area: row1-rightbutton;
   text-align: center;
   position: relative;
-  right: 200px;
+  right: 180px;
 }
 
 .row1-leftbutton {
   grid-area: row1-leftbutton;
   text-align: center;
   position: relative;
-  right: 120px;
+  right: 165px;
 }
 
 .row1 button { 
@@ -718,8 +730,8 @@ textarea {
 }
 
 .row2image img{
-  width: 57%;
-  margin-left: 147px;
+  width: 90%;
+  margin-left: 17px;
 }
 
 .row2-captions p{
@@ -747,7 +759,7 @@ textarea {
   border-radius: 20px; 
   text-decoration: none;   
   margin-top: 70px;
-  margin-left: 110px;
+  margin-left: 10px;
   font-weight: bold;
   /* position: relative;
   left: 355px; */
@@ -804,7 +816,7 @@ textarea {
   font-weight: bold;
   position: relative;
   left: 25px;
-  bottom: 50px;
+  bottom: 80px;
   box-shadow: 0 15px 8px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease;
   border: none;
@@ -842,7 +854,9 @@ textarea {
   background: #ffffff;
 }
 .project-table caption {
+  /* Custom font from Google Fonts applied to table caption */
   caption-side: top;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 1.1rem;
   padding: 8px 0;
@@ -871,22 +885,48 @@ textarea {
 }
 
 @media screen and (max-width: 600px) {
+  /* Make the events table more compact and fit narrow screens */
   .project-table {
-    width: 96%;
+    width: 100%;
+    max-width: calc(100% - 16px);
+    min-width: 0; /* allow table to shrink instead of forcing horizontal scroll */
+    box-sizing: border-box;
+    font-size: 14px;
+    border-width: 2px;
   }
   .project-table thead {
-    display: none; 
+    display: none;
   }
-  .project-table tbody td {
+  .project-table tbody td,
+  .project-table tbody th {
     display: block;
     width: 100%;
     box-sizing: border-box;
+    padding: 8px 10px;
+  }
+  /* allow long words/locations to wrap instead of creating horizontal overflow */
+  .project-table th,
+  .project-table td { white-space: normal; word-break: break-word; overflow-wrap: anywhere; }
+  /* Show field labels inside each stacked card using data-label attrs */
+  .project-table tbody td::before,
+  .project-table tbody th::before {
+    content: attr(data-label);
+    display: block;
+    font-weight: 700;
+    color: #2383c6;
+    margin-bottom: 6px;
+    font-size: 0.95em;
+    text-transform: none;
   }
   .project-table tbody tr {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     display: block;
     border: 1px solid #d0d7de;
+    border-radius: 6px;
+    overflow: hidden;
   }
+  .project-table caption { font-size: 1rem; padding: 6px 0; }
+  .project-table-section { padding: 0 8px; justify-content: flex-start; }
 }
 
 
@@ -896,8 +936,7 @@ textarea {
   padding: 0 12px;
 }
 .project-table {
-   
-  min-width: 540px;
+  min-width: 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -918,7 +957,7 @@ textarea {
     display: block;
   }
 }
-
+/* Mobile view for index.html hero and header */
 @media only screen and (max-width: 768px) {
   p {
     font-size: 14px;
@@ -937,16 +976,22 @@ textarea {
     font-size: 18px;
     padding: 0;
     margin: 20px 0;
+    margin-bottom: 40px;
   }
   .hero .info button {
     width: 40%;
+    position: relative;
     margin: 10px 0 10px 30px;
   }
   .hero .info a {
     padding: 10px 20px;
+    font-size: 18px;
+    position: relative;
+    left: 0;
+    margin-left: 20px;
   }
   .hero {
-    background-position: center center;
+    background-position: 0px 150px;
   }
  
 } 
@@ -958,22 +1003,23 @@ textarea {
     display: block;
   }
 
-  .origin h1 {
+  .h1-origin {
     font-size: 28pt;
     margin-left: 0;
     text-align: center;
-    margin-bottom: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   video {
-    width: 500px;
-    margin-left: 50px;
+    width: 450px;
+    margin-left: 15px;
+    margin-top: 80px;
   }
 
   .origin p {
-    font-size: 20pt;
-    margin-left: 60px;
-    padding-right: 50px;
+    font-size: 16pt;
+    margin-left: 50px;
     line-height: 1.8;
     width: 81%;
   }
@@ -988,7 +1034,6 @@ textarea {
     flex-direction: column;
     align-items: center;
     margin-left: 0;
-    padding-top: 50px;
     gap: 20px;
   }
 
@@ -998,13 +1043,13 @@ textarea {
   }
   
   .vision-about img {
-    width: 500px;
-    margin-left: 50px;
+    width: 450px;
+    margin-left: 15px;
     float: none;
   }
 
   .vision-about p {
-    font-size: 20pt;
+    font-size: 16pt;
     padding-left: 60px;
     padding-top: 25px;
     line-height: 1.8;
@@ -1014,12 +1059,12 @@ textarea {
     position: relative;
     left: 0;
     top: 0;
-    margin-left: 320px;
+    margin-left: 100px;
   } 
 
   .motto h2 {
     font-size: 22px;
-    margin: 50px 100px 0;
+    margin: 50px 10px;
     padding: 10px;
   }
 
@@ -1033,12 +1078,6 @@ textarea {
     margin-left: 0;
     padding: 10px;
   }
-  
-
-  /* .vision-about p {
-    padding: 10px;
-    font-size: smaller;
-  } */
 
 
 }
@@ -1063,6 +1102,15 @@ textarea {
   .row1-captions p {
     width: auto;
     font-size: 16px;
+    margin-top: 20px;
+    padding: 0 10px 10px 10px;
+    line-height: 1.5;
+  }
+
+  .row1-captions2 p {
+    width: auto;
+    font-size: 16px;
+    margin-top: 20px;
     padding: 0 10px 10px 10px;
     line-height: 1.5;
   }
@@ -1157,4 +1205,162 @@ textarea {
     right: auto;
     box-shadow: 0 10px 6px rgba(0,0,0,0.08);
   }
+}
+
+/* Very small screens: tighten typography and paddings further  */
+@media screen and (max-width: 480px) {
+  html, body {
+  overflow-x: hidden; 
+}
+/* Hide scrollbar visuals but keep scrolling available where applicable */
+body {
+  -ms-overflow-style: none; /* IE 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+body::-webkit-scrollbar { width: 0; height: 0; } 
+  html, body { font-size: 14px; }
+  p { font-size: 12px; }
+  h1 { font-size: 20px; }
+
+  /* Project table tighter */
+  .project-table { font-size: 12px; border-width: 1px; }
+  .project-table caption { font-size: 0.95rem; }
+  .project-table tbody td,
+  .project-table tbody th { padding: 6px 8px; }
+  .project-table-section { padding: 0 6px; }
+  .project-table tbody tr { margin-bottom: 8px; }
+
+  /* Buttons slightly smaller and easier to tap */
+  .row1-leftbutton button,
+  .row1-rightbutton button,
+  .row2 button,
+  .row3 button {
+    font-size: 16px;
+    padding: 8px 20px;
+    width: 90%;
+    max-width: 320px;
+    box-shadow: 0 8px 6px rgba(0,0,0,0.06);
+  }
+
+  /* Images: ensure they don't exceed container width */
+  .row1-left img,
+  .row1-right img,
+  .row2image img,
+  .row3image img { width: 100%; height: auto; margin: 0; }
+  
+  
+}
+
+/* Responsive rules for contact / signup form */
+@media screen and (max-width: 768px) {
+  .signup-form {
+    width: 90%;
+    max-width: 520px;
+    padding: 24px;
+    box-sizing: border-box;
+    margin: 20px auto;
+  }
+  .signup-form h2 { font-size: 1.25rem; }
+  .submit-button { font-size: 18px; padding: 10px 14px; }
+}
+
+@media screen and (max-width: 480px) {
+  .signup-form {
+    width: 94%;
+    max-width: 420px;
+    padding: 18px;
+    margin: 14px auto;
+  }
+  .signup-form h2 { font-size: 1.1rem; }
+  .submit-button { font-size: 16px; padding: 10px 12px; }
+}
+
+@media screen and (max-width: 380px) {
+  .signup-form {
+    width: 96%;
+    max-width: 360px;
+    padding: 12px;
+    margin: 10px auto;
+  }
+  .signup-form h2 { font-size: 1rem; }
+  .submit-button { font-size: 15px; padding: 8px 10px; }
+}
+
+/* Make contact page hero image responsive on smaller screens */
+@media screen and (max-width: 1024px) {
+  .contact-hero img {
+    height: auto; /* avoid fixed tall images on medium screens */
+    max-height: 520px;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contact-hero img {
+    height: auto;
+    max-height: 320px;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .contact-hero img {
+    height: auto;
+    max-height: 220px;
+    object-fit: cover;
+  }
+}
+
+
+
+
+/* Desktop: hide the secondary row1 captions container */
+@media screen and (min-width: 768px) {
+  .row1-captions2 { display: none; }
+}
+
+/* Mobile view for reflection page */
+
+/* Tablet layout adjustments (769px - 1024px) for index/hero and header */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  html, body { font-size: 16px; }
+
+  /* Hero: reduce height, center content and make background cover-ish on tablets */
+  .hero {
+    height: 70vh;
+    background-position: center 100px;
+    background-size: contain;
+  }
+  .hero .info {
+    width: 90%;
+    max-width: 900px;
+    padding: 24px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .hero .info p {
+    font-size: 20px;
+    margin: 12px 0 18px;
+    padding: 0;
+  }
+  .hero .info a,
+  .hero .info button {
+    font-size: 18px;
+    padding: 8px 22px;
+    margin: 8px 50px;
+    position: relative;
+    left: 0;
+  }
+
+  /* Header: slightly smaller logo and tightened action spacing */
+  .header-top img { width: 54px; margin-left: 12px; }
+  .header-top h1 { font-size: 18px; margin: 8px 6px; }
+  .header-actions { padding-right: 12px; gap: 8px; }
+
+  /* Footer: slightly more compact on tablets */
+  footer { padding: 12px 18px; }
+  .footer-content { gap: 10px; }
+  .footer-content h1 { font-size: 15px; }
 }

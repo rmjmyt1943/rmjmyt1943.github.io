@@ -15,16 +15,55 @@ Description: Creating the Hero Section of a Website
         <link rel="stylesheet" href="style.css"> <!--A link to an external CSS file-->
         <link rel="stylesheet" href="nav.css">
         <link rel="icon" type="image/x-icon" href="Media/favicon.ico">
+        
     </head>
 
     <body> <!--A sample heading for visual testing-->
             
      <header> <!--section that will later contain your logo and navigation-->
-        <div class="header-top">
+            <div class="header-top">
             <div class="site-logo">
                 <img src="Logo_PhiloSe_Transparent-Copy.png" alt="Circular emblem showing six hands in different skin tones forming a ring and cupping a bright blue heart at the center; white badge with thin black and blue border; outer text reads GIVING HOPE TO THE WORLD and PHILO SÉ CLUB; tone conveys warmth, unity, and hope">
             </div>
-            <h1> Philo Sé Bible Study Club </h1> 
+            <h1 class="site-title"> Philo Sé Bible Study Club </h1> 
+            <div class="header-actions" aria-hidden="false">
+                <div class="search-container" aria-hidden="false">
+                  <input id="site-search" class="search-box" type="search" placeholder="Search site..." aria-label="Search site">
+                </div>
+
+                <button class="icon-button icon-search" aria-label="Search">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><title>Search</title><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zM10 15a5 5 0 110-10 5 5 0 010 10z"/></svg>
+                </button>
+
+                <button id="notif-button" class="icon-button icon-bell" aria-label="Notifications" aria-expanded="false">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><title>Notifications</title><path d="M12 22a2 2 0 002-2H10a2 2 0 002 2zm6-6V10c0-3.07-1.63-5.64-4.5-6.32V3a1.5 1.5 0 10-3 0v.68C7.63 4.36 6 6.92 6 10v6l-2 2v1h16v-1l-2-2z"/></svg>
+                    <span id="bell-badge" class="bell-badge hidden" aria-hidden="true">0</span>
+                </button>
+
+                <div id="notif-list" class="notif-list" role="menu" aria-hidden="true" aria-labelledby="notif-button">
+                    <div class="notif-header">
+                        <strong>Notifications</strong>
+                        <button id="mark-read-btn" class="mark-read-btn" type="button">Mark all read</button>
+                    </div>
+                    <ul>
+                        <li class="notif-item unread" tabindex="0" data-id="1">
+                            <div class="notif-badge" aria-hidden="true"></div>
+                            <div class="notif-text">New event: Campus Bible Study this Friday at 7pm.</div>
+                            <div class="notif-time">2h</div>
+                        </li>
+                        <li class="notif-item unread" tabindex="0" data-id="2">
+                            <div class="notif-badge" aria-hidden="true"></div>
+                            <div class="notif-text">Reminder: Volunteer meeting tomorrow at 5pm.</div>
+                            <div class="notif-time">1d</div>
+                        </li>
+                        <li class="notif-item" tabindex="0" data-id="3">
+                            <div class="notif-text">Weekly devotional posted: 'Love One Another'.</div>
+                            <div class="notif-time">3d</div>
+                        </li>
+                    </ul>
+                    <div class="notif-empty" style="display:none;">No notifications</div>
+                </div>
+            </div>
         </div>
 
         <nav>
@@ -54,6 +93,19 @@ Description: Creating the Hero Section of a Website
             <!-- </div> -->
         </ul>
         </nav>   
+        <div class="hamburger">
+            <input type="checkbox" id="menu-toggle" />
+            <label for="menu-toggle" class="hamburger">☰</label>
+            <nav class="mobile-menu">
+                <ul class="main-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="project.html">Contents</a></li>
+                <li><a href="reflection.html">Reflection</a></li>
+                <li><a href="contact.html">Contact</a></li>
+        </ul>
+            </nav>
+        </div>
         </header>
         
         <section id="hero"> <!--A hero section with a heading and a blockquote-->
@@ -68,15 +120,14 @@ Description: Creating the Hero Section of a Website
                 </div>
             </div>
         </section>
-            
+            <!--  
             <h2> Events/News </h2>
-            <!--3 columns of different events and news (Past,Upcoming)-->
             <h2> About </h2>
             <div class="aboutsection">
             
-            <!-- <div class="aboutimage">
+             <div class="aboutimage">
                 <img src="Media/PhiloSePic.jpeg" alt="Philo Se Picture">
-                </div> -->
+                </div> 
             <p> We carry out various activities on campus and in our community to promote unity and fellowship being a source of hope through the teachings of Christ.
                 <br>We help students grow in their faith and relationship with God through weekly Bible studies and fellowship events.
                 <br> We help relieve the stress students may experience in their lives by becoming one family.
@@ -85,16 +136,256 @@ Description: Creating the Hero Section of a Website
                 <br>To help students understand the credibility of God's word by holding Bible studies emphasizing Science and World History. 
             </div>
                 
-            <h2> Get Started </h2> <!--Simple sign up sheet will name and email-->
+            <h2> Get Started </h2> Simple sign up sheet will name and email
             <p> Name: ________________ </p>
             <p> Email: ________________ </p>
-            <button type="submit"> Submit </button>
+            <button type="submit"> Submit </button> 
+        -->
+        <h2>Rodney Jones — 12/3/2025</h2>
+     <footer>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="Logo_PhiloSe_Transparent-Copy.png" alt="Philo Sé Club logo">
+                </div>
 
-     <footer> <!--section that contains your name and current date-->
-            <h1> Rodney Jones 10/4/2025</h1>
+                <div class="contact-links" aria-label="Contact links">
+                    <div class="contact-item">
+                        <a class="contact-link email" href="mailto:philoseclub@gmail.com" aria-label="Email Philo Sé Club">
+                            <svg class="contact-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+                                <title>Email</title>
+                                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                        </a>
+                        <a class="contact-text" href="mailto:philoseclub@gmail.com">philoseclub@gmail.com</a>
+                    </div>
+
+                    <div class="contact-item">
+                        <a class="contact-link phone" href="tel:+1234567890" aria-label="Call Philo Sé Club">
+                            <svg class="contact-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+                                <title>Phone</title>
+                                <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.27 11.36 11.36 0 003.56.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.56 1 1 0 01-.27 1.11l-2.18 2.12z"/>
+                            </svg>
+                        </a>
+                        <a class="contact-text" href="tel:+1234567890">+1 (234) 567-890</a>
+                    </div>
+                </div>
+            </div>
         </footer>
     
     </body>
+
+<!-- <script>
+// Search and notifications: persistent read state + visual unread badge
+document.addEventListener('DOMContentLoaded', function () {
+    var searchBtn = document.querySelector('.icon-button.icon-search');
+    var searchContainer = document.querySelector('.search-container');
+    var searchInput = document.getElementById('site-search');
+
+    var bellBtn = document.getElementById('notif-button');
+    var bellBadge = document.getElementById('bell-badge');
+    var notifList = document.getElementById('notif-list');
+    var markAllBtn = document.getElementById('mark-read-btn');
+
+    var STORAGE_KEY = 'philose_notifications_read';
+
+    function loadReadSet() {
+        try {
+            var raw = localStorage.getItem(STORAGE_KEY);
+            if (!raw) return new Set();
+            var arr = JSON.parse(raw);
+            return new Set(arr);
+        } catch (e) {
+            return new Set();
+        }
+    }
+
+    function saveReadSet(set) {
+        try { localStorage.setItem(STORAGE_KEY, JSON.stringify(Array.from(set))); } catch (e) {}
+    }
+
+    var readSet = loadReadSet();
+
+    // Initialize items according to readSet
+    if (notifList) {
+        var items = notifList.querySelectorAll('.notif-item');
+        items.forEach(function (it) {
+            var id = it.getAttribute('data-id');
+            if (id && readSet.has(id)) {
+                it.classList.remove('unread');
+                var b = it.querySelector('.notif-badge'); if (b) b.style.display = 'none';
+            } else {
+                // ensure unread class present only when appropriate
+                if (id) it.classList.add('unread');
+            }
+        });
+    }
+
+    // Search toggle
+    if (searchBtn && searchContainer && searchInput) {
+        searchBtn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            var isOpen = searchContainer.classList.toggle('open');
+            if (isOpen) { searchInput.focus(); }
+        });
+    }
+
+    // Notifications toggle
+    if (bellBtn && notifList) {
+        bellBtn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            var isOpen = notifList.classList.toggle('open');
+            bellBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            notifList.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+            if (isOpen) {
+                var first = notifList.querySelector('.notif-item');
+                if (first) { first.focus && first.focus(); }
+            }
+            updateUnreadCount();
+            toggleMarkAllVisibility();
+        });
+    }
+
+    // Close both panels when clicking outside
+    document.addEventListener('click', function (e) {
+        if (searchContainer && !searchContainer.contains(e.target) && !searchBtn.contains(e.target)) {
+            searchContainer.classList.remove('open');
+        }
+        if (notifList && !notifList.contains(e.target) && !bellBtn.contains(e.target)) {
+            notifList.classList.remove('open');
+            bellBtn && bellBtn.setAttribute('aria-expanded', 'false');
+            notifList && notifList.setAttribute('aria-hidden', 'true');
+        }
+    });
+
+    // Close on Escape
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+            if (searchContainer) { searchContainer.classList.remove('open'); }
+            if (notifList) {
+                notifList.classList.remove('open');
+                bellBtn && bellBtn.setAttribute('aria-expanded', 'false');
+                notifList && notifList.setAttribute('aria-hidden', 'true');
+            }
+        }
+    });
+
+    // Helpers: update unread count and toggle Mark All button (also updates bell badge)
+    function updateUnreadCount() {
+        if (!notifList || !bellBtn) return;
+        var unread = notifList.querySelectorAll('.notif-item.unread').length;
+        if (unread > 0) {
+            bellBtn.setAttribute('aria-label', 'Notifications (' + unread + ' unread)');
+            if (bellBadge) { bellBadge.textContent = unread > 99 ? '99+' : String(unread); bellBadge.classList.remove('hidden'); }
+        } else {
+            bellBtn.setAttribute('aria-label', 'Notifications');
+            if (bellBadge) { bellBadge.textContent = '0'; bellBadge.classList.add('hidden'); }
+        }
+    }
+
+    function toggleMarkAllVisibility() {
+        if (!notifList) return;
+        var mark = document.getElementById('mark-read-btn');
+        if (!mark) return;
+        var unread = notifList.querySelectorAll('.notif-item.unread').length;
+        mark.style.display = unread > 0 ? 'inline-block' : 'none';
+        var empty = notifList.querySelector('.notif-empty');
+        if (empty) { empty.style.display = (notifList.querySelectorAll('.notif-item').length === 0) ? 'block' : 'none'; }
+    }
+
+    // Mark all read
+    if (markAllBtn && notifList) {
+        markAllBtn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            var items = notifList.querySelectorAll('.notif-item.unread');
+            items.forEach(function (it) {
+                it.classList.remove('unread');
+                var badge = it.querySelector('.notif-badge');
+                if (badge) { badge.style.display = 'none'; }
+                var id = it.getAttribute('data-id'); if (id) readSet.add(id);
+            });
+            saveReadSet(readSet);
+            updateUnreadCount();
+            toggleMarkAllVisibility();
+        });
+    }
+
+    // Clicking an item marks it read
+    if (notifList) {
+        notifList.addEventListener('click', function (e) {
+            var item = e.target.closest && e.target.closest('.notif-item');
+            if (!item) return;
+            var id = item.getAttribute('data-id');
+            if (item.classList.contains('unread')) {
+                item.classList.remove('unread');
+                var badge = item.querySelector('.notif-badge');
+                if (badge) badge.style.display = 'none';
+                if (id) { readSet.add(id); saveReadSet(readSet); }
+                updateUnreadCount();
+                toggleMarkAllVisibility();
+            }
+        });
+    }
+
+    // initial state
+    updateUnreadCount();
+    toggleMarkAllVisibility();
+    
+    // Add notification programmatically (will animate bell and the new item)
+    function addNotification(text, timeLabel) {
+        if (!notifList) return;
+        var ul = notifList.querySelector('ul');
+        if (!ul) return;
+        var id = String(Date.now());
+        var li = document.createElement('li');
+        li.className = 'notif-item unread new-arrival';
+        li.setAttribute('tabindex', '0');
+        li.setAttribute('data-id', id);
+
+        var badge = document.createElement('div');
+        badge.className = 'notif-badge';
+        badge.setAttribute('aria-hidden', 'true');
+        li.appendChild(badge);
+
+        var t = document.createElement('div');
+        t.className = 'notif-text';
+        t.textContent = text || 'New notification';
+        li.appendChild(t);
+
+        var tm = document.createElement('div');
+        tm.className = 'notif-time';
+        tm.textContent = timeLabel || 'now';
+        li.appendChild(tm);
+
+        // Prepend new item
+        ul.insertBefore(li, ul.firstChild);
+
+        // Update visuals
+        updateUnreadCount();
+        toggleMarkAllVisibility();
+
+        // Bell pulse
+        if (bellBadge) {
+            bellBadge.classList.remove('pulse');
+            // trigger reflow to restart animation
+            void bellBadge.offsetWidth;
+            bellBadge.classList.add('pulse');
+            // ensure badge shows the number
+            bellBadge.classList.remove('hidden');
+        }
+
+        // Remove 'new-arrival' after animation completes (900ms)
+        setTimeout(function () {
+            li.classList.remove('new-arrival');
+        }, 1000);
+
+        // Do not mark as read — keep unread until user action
+        return id;
+    }
+
+    // expose for console or other scripts
+    window.addNotification = addNotification;
+});
+</script> -->
 
 
 </html>
