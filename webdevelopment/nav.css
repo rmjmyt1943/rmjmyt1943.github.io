@@ -42,6 +42,21 @@
   }
 }
 
+@media screen and (max-width: 480px) {
+  .header-top {  
+    gap: 0; 
+  }
+  .header-top img { 
+    width: 44px; 
+    margin-left: 10px;
+  }
+  .header-top h1 { 
+    font-size: 15px; 
+    margin: 8px 6px; 
+    line-height: 1.1; 
+  }
+}
+
 /* Header action buttons (search, notifications) */
 .header-actions {
   margin-left: auto;
@@ -333,12 +348,10 @@
 .mark-read-btn:hover { 
   background: rgba(37,99,235,0.06); 
 }
-
-@media screen and (max-width: 480px) {
-  /* hide header actions on very small screens to save space */
-  .header-actions { display: none; }
+.mark-read-btn:focus { 
+  outline: 3px solid rgba(37,99,235,0.24); 
+  outline-offset: 2px; 
 }
-
 /* Search input container in header */
 .search-container {
   position: relative;
@@ -377,10 +390,6 @@
   width: 48px;
   height: auto;
   margin: 0 12px 0 0;
-}
-
-@media screen and (max-width: 480px) {
-  .footer-content .footer-logo img { width: 40px;}
 }
 
 .header-top-2 a img{
@@ -738,8 +747,10 @@ nav {
     position: relative;
   }
   .footer-content h1 {
-    font-size: 16px;
+    font-size: 36px;
     font-weight: 600;
+    padding-left: 570px;
+    padding-right: 200px;
     color: #ffffff; /* ensure readable on blue background */
     margin: 0;
   }
@@ -866,20 +877,32 @@ nav {
     color: #fff;
   }
 
-  /* On wider screens */
-  @media screen and (min-width: 480px) {
-    .contact-links { 
-      justify-self: end; 
-    }
+@media screen and (max-width: 480px) {
+  .footer-content .footer-logo img { 
+    width: 40px;
+  }
 
-.contact-text {
-    color: #ffffff; 
-    font-size: 14px;
-    font-weight: 400;
+  .contact-text {
+    font-size: 12px;
     padding: 0;
-    border-radius: 8px;
-    transition: background 180ms ease, color 180ms ease, transform 150ms ease;
   }
 
+  .footer-content h1 {
+    display: none;
+  }
+  .footer-logo {
+    padding: 0px !important;
+  }
+}
+
+@media  screen and (max-width: 1024px) {
+  .footer-content h1 {
+    display: none;
   }
 
+  .footer-logo {
+    padding-right: 200px;
+  }
+  
+  
+}
