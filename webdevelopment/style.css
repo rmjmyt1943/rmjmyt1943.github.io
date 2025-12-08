@@ -116,67 +116,7 @@ html {
   transition: background-color 0.3s ease;
 }
 
-/* Print About Page */
-@media print {
-  header, .origin video, .vision-about img, .vision-about a, 
-  nav, .site-logo, .footer-logo, .motto, .vision-list li, .line
-  {
-    display: none;
-  }
 
-  body {
-    font-size: 16pt;
-    line-height: 24pt;
-    color: #000000;
-    font-family: 'Times New Roman', Times, serif;
-    width: 100%;
-  }
-
-  .origin h1 {
-    font-size: 40pt;
-    line-height: 30pt;
-    text-align: center;
-    width: 100%;
-    margin: 0;
-    padding-bottom: 40px;
-    margin: 30px 40px 40px 1px !important;
-    /* margin-left: 300px; */
-  }
-  .origin p {
-    width: 0;
-    margin-left: 0 !important;
-    line-height: 40pt;
-    font-size: 24pt;
-  }
-  
-  .motto h2 {
-    font-size: 30pt;
-    text-align: center;
-    color: #000000;
-    border: none;
-  }
-
-  .vision-about p {
-    font-size: 24pt;
-    line-height: 30pt;
-    padding: 50px 0 20px 5px !important;
-  } 
-  .about-list li {
-    font-size: 24pt;
-    color: #000000;
-    border: none;
-    background-color: transparent !important;
-    list-style-type: none;
-  }
-  .about-list ul {
-    margin-left: 0 !important;
-    padding: 20px;
-    gap: 20px;
-    justify-content: center;
-  }
-  
-
-}
 
 /* End of Hero */
 
@@ -1554,5 +1494,94 @@ body.project-page::-webkit-scrollbar { width: 0; height: 0; } /* WebKit/Blink */
     margin-left: 25px;
   }
 }
+/* Print styles for about page */
+@page { size: A4 portrait; margin: 10mm; }
+@media print {
+  /* hide chrome and non-essential controls */
+  header, nav, .site-logo, .footer-logo, .footer-content, .header-top, .header-actions,
+  .main-nav, .hamburger, .contact-section, .contact-link, .contact-text, footer, footer h1,
+  footer a, .about-list img, .vision-about img, .origin video, .about-list,
+  .motto, .vision-about a, .about-list li
 
+  { 
+    display: none !important; 
+  }
 
+  /* compact typography to fit one page */
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    color: #000000;
+    align-items: center;
+    text-align: center;
+    font-size: 16pt;
+    line-height: 1.15;
+  }
+
+  .origin, .vision-about, .about-list, .content-title {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+    page-break-inside: avoid;
+  }
+
+  .origin h1 {
+    font-size: 16pt !important;
+    line-height: 1.05 !important;
+    text-align: center !important;
+    padding: 0 !important;
+  }
+
+  .origin p, .vision-about p, .about-list li {
+    font-size: 16pt !important;
+    line-height: 1.15 !important;
+    margin: 0 0 6px !important;
+    padding: 0 !important;
+  }
+
+}
+
+@media  screen and (min-width: 1440px) {
+
+  video {
+    width: 700px;
+    margin-left: 50px;
+    margin-top: 80px;
+  }
+
+  .about-list li {
+    font-size: 24pt;
+    padding: 10px 40px;
+  }
+
+  .row1-left img {
+    width: 400px;
+    margin-left: 90px;
+  }
+  .row1-right img {
+    width: 400px;
+    margin-left: 80px;
+  }
+  .row2 p {
+    font-size: 22px;
+    margin-top: 30px;
+  }
+  .row3 button { 
+    font-size: 22px; 
+    padding: 15px 60px; 
+    position: relative;
+    top: -50px;
+    margin-bottom: 0;
+  }
+
+  .project-table {
+    width: 80%;
+    max-width: 1200px;
+    
+  }
+ 
+}

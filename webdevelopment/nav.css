@@ -883,7 +883,7 @@ nav {
   }
 
   .contact-text {
-    font-size: 12px;
+    font-size: 11.5px;
     padding: 0;
   }
 
@@ -905,4 +905,16 @@ nav {
   }
   
   
+}
+
+@media  screen and (min-width: 1440px) {
+
+  .footer-logo {
+    padding-right: 10px;
+  }
+
+  .footer-content h1 {
+    padding-left: 700px;
+    padding-right: 250px;
+  }
 }
